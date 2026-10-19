@@ -4,227 +4,760 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A portfolio exploring technical communication, knowledge management, API documentation and AI-assisted content workflows.">
-  <title>Geetha B.G. | Knowledge & AI Portfolio</title>
+  <meta name="description" content="Geetha B.G. — Technical communication, knowledge strategy, content systems and AI-enabled workflows.">
+  <title>Geetha B.G. | Content Strategy & Knowledge Systems</title>
+
   <style>
-    * { box-sizing: border-box; }
+    :root {
+      --navy: #123b56;
+      --navy-dark: #0b293d;
+      --blue: #dcebf5;
+      --accent: #b9d9eb;
+      --ink: #17232e;
+      --muted: #5e6a75;
+      --line: #dce2e7;
+      --paper: #ffffff;
+      --background: #f5f6f7;
+      --max-width: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f8fa;
-      color: #202938;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
 
-    header {
-      padding: 22px 8%;
-      background: #ffffff;
-      border-bottom: 1px solid #e4e7ec;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
+    a {
+      color: inherit;
     }
 
-    header strong { font-size: 18px; }
+    .container {
+      width: min(var(--max-width), 100% - 64px);
+      margin-inline: auto;
+    }
 
-    nav a {
-      margin-left: 18px;
-      color: #465368;
+    /* Navigation */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #303d49;
       text-decoration: none;
       font-size: 14px;
+      border-bottom: 1px solid transparent;
     }
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 65px 24px;
+    .nav-links a:hover {
+      border-bottom-color: var(--navy);
+    }
+
+    /* Hero */
+
+    .hero {
+      background: var(--navy);
+      color: white;
+      padding: 88px 0 92px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.5fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .portrait-placeholder {
+      min-height: 360px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background:
+        linear-gradient(145deg, #41677f, #1b4059);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .portrait-placeholder .initials {
+      font-size: 64px;
+      font-weight: 700;
+      letter-spacing: -4px;
+      color: var(--accent);
+      line-height: 1.2;
+    }
+
+    .portrait-placeholder p {
+      color: #dceaf2;
+      font-size: 13px;
+      margin-top: 16px;
     }
 
     .eyebrow {
-      color: #5269a8;
-      font-weight: bold;
-      font-size: 12px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
       letter-spacing: 2px;
+      color: var(--accent);
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 1.04;
+      letter-spacing: -3px;
+      margin: 20px 0;
+      font-weight: 700;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero h2 {
+      font-size: clamp(21px, 2.5vw, 29px);
+      font-weight: 400;
+      line-height: 1.4;
+      margin: 0 0 20px;
+    }
+
+    .hero-description {
+      max-width: 570px;
+      color: #e0eaf0;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 19px;
+      border: 1px solid white;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .button-primary {
+      background: white;
+      color: var(--navy-dark);
+    }
+
+    .button-primary:hover {
+      background: var(--blue);
+    }
+
+    .button-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Shared sections */
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-muted {
+      background: var(--background);
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 36px;
+    }
+
+    .section-label {
+      color: #476c85;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
     }
 
-    h1 {
-      font-size: clamp(36px, 6vw, 58px);
-      line-height: 1.12;
-      letter-spacing: -1.5px;
-      max-width: 760px;
-      margin: 18px 0;
+    .section-heading h2 {
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.2;
+      letter-spacing: -1.4px;
+      margin: 10px 0 14px;
     }
 
-    h2 { line-height: 1.3; }
-
-    .intro {
-      font-size: 19px;
-      color: #536174;
-      max-width: 720px;
+    .section-heading p {
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0;
     }
 
-    .section { margin-top: 64px; }
+    /* Point of view */
 
-    .grid {
+    .approach-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin-top: 24px;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
     }
 
-    .card {
+    .approach-grid h2 {
+      font-size: 35px;
+      line-height: 1.25;
+      letter-spacing: -1px;
+      margin: 10px 0 18px;
+    }
+
+    .approach-copy p {
+      color: var(--muted);
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    .principle {
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .principle h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    .principle p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Case studies */
+
+    .case-studies {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .case-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
       background: white;
-      border: 1px solid #e1e6ee;
-      border-radius: 14px;
-      padding: 24px;
+      border: 1px solid var(--line);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .card p { color: #586579; }
+    .case-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(20, 42, 58, 0.07);
+    }
 
-    .label {
-      color: #5269a8;
+    .case-visual {
+      min-height: 185px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #e5edf3;
+      color: var(--navy);
+    }
+
+    .case-visual.dark {
+      background: #173c54;
+      color: white;
+    }
+
+    .case-visual.sand {
+      background: #e9e5dc;
+      color: #383b36;
+    }
+
+    .case-number {
       font-size: 12px;
-      font-weight: bold;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+    }
+
+    .case-visual strong {
+      font-size: 25px;
+      line-height: 1.25;
+      max-width: 360px;
+    }
+
+    .case-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 27px;
+    }
+
+    .case-content h3 {
+      font-size: 22px;
+      line-height: 1.3;
+      margin: 0 0 12px;
+      letter-spacing: -0.4px;
+    }
+
+    .case-content p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 18px;
+    }
+
+    .case-link {
+      margin-top: auto;
+      padding-top: 8px;
+      color: #285875;
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .case-link:hover {
+      text-decoration: underline;
+    }
+
+    .status {
+      font-size: 11px;
+      color: #65717c;
       text-transform: uppercase;
       letter-spacing: 1px;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
 
-    .note {
-      background: #edf1f8;
-      padding: 24px;
-      border-radius: 12px;
-      margin-top: 24px;
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 64px;
+    }
+
+    .about-grid h2 {
+      font-size: 36px;
+      line-height: 1.25;
+      letter-spacing: -1px;
+      margin-top: 10px;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin-top: 0;
+    }
+
+    .capabilities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .capabilities span {
+      border: 1px solid #d5dde4;
+      padding: 7px 11px;
+      font-size: 12px;
+      color: #344c5d;
+      background: white;
+    }
+
+    /* Contact */
+
+    .contact {
+      background: var(--navy-dark);
+      color: white;
+      padding: 58px 0;
+    }
+
+    .contact-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .contact h2 {
+      font-size: 32px;
+      line-height: 1.25;
+      margin: 8px 0;
+    }
+
+    .contact p {
+      color: #d4e0e8;
+      margin-bottom: 0;
+    }
+
+    .contact .button {
+      flex-shrink: 0;
     }
 
     footer {
-      padding: 28px 8%;
-      border-top: 1px solid #e1e6ee;
-      color: #667085;
-      font-size: 13px;
-      text-align: center;
+      background: var(--navy-dark);
+      color: #c5d4df;
+      border-top: 1px solid #315064;
+      padding: 22px 0;
+      font-size: 12px;
     }
 
-    a { color: #365bb5; }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-    @media (max-width: 600px) {
-      header { padding: 18px 6%; }
-      nav a { margin-left: 10px; }
-      main { padding-top: 42px; }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Responsive layout */
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 36px, var(--max-width));
+      }
+
+      .nav {
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding: 50px 0 60px;
+      }
+
+      .hero-grid,
+      .approach-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .portrait-placeholder {
+        min-height: 210px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.8px;
+      }
+
+      .section {
+        padding: 58px 0;
+      }
+
+      .case-studies {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <strong>Geetha B.G.</strong>
-    <nav>
-      <a href="#approach">My approach</a>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-    </nav>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        GEETHA B.G. · CONTENT & KNOWLEDGE STRATEGY
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#approach">Approach</a>
+        <a href="#work">Case Studies ↓</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <p class="eyebrow">Technical Communication · Knowledge · AI</p>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
 
-    <h1>Documentation should help people move forward.</h1>
+        <div class="portrait-placeholder" aria-label="Portrait placeholder">
+          <div class="initials">GB</div>
+          <p>Technical Communication<br>Knowledge Strategy · AI</p>
+        </div>
 
-    <p class="intro">
-      I explore how customer insight, thoughtful content design
-      and AI-assisted workflows can make complex information
-      easier to find, understand and use.
-    </p>
+        <div>
+          <p class="eyebrow">Content Strategy · Knowledge Systems · AI</p>
 
-    <section class="section" id="approach">
-      <h2>My point of view</h2>
-      <p>
-        Publishing content is only one part of the job.
-        The real challenge is helping people find the right
-        information, trust it, and use it to complete a task.
-      </p>
-      <p>
-        AI gives us new ways to analyse requirements, create
-        content and review quality. But generating more content
-        is not the same as creating better knowledge.
-      </p>
-      <p>
-        I am building practical examples to explore how we can
-        connect customer needs, reliable documentation and
-        responsible AI-assisted content operations.
-      </p>
+          <h1>GEETHA <span>B.G.</span></h1>
+
+          <h2>
+            Turning complex technology into knowledge people can use.
+          </h2>
+
+          <p class="hero-description">
+            With 20+ years in technical communication, I bring
+            together content strategy, customer insight and
+            knowledge design. I am building on that experience
+            to explore how AI can improve the way knowledge is
+            created, reviewed, discovered and used.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">
+              Explore my work ↓
+            </a>
+            <a class="button button-secondary" href="#about">
+              My approach
+            </a>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <section class="section" id="projects">
-      <h2>Selected work</h2>
-      <p>
-        One end-to-end project, built to demonstrate the
-        decisions behind the deliverables as well as the
-        deliverables themselves.
-      </p>
+    <section class="section" id="approach">
+      <div class="container approach-grid">
 
-      <div class="grid">
-        <article class="card">
-          <p class="label">Project 01 · In progress</p>
-          <h3>Knowledge Hub API</h3>
-          <p>
-            A working API with developer-focused reference
-            documentation, practical examples and error handling.
-          </p>
-          <p>Coming soon</p>
-        </article>
+        <div>
+          <p class="section-label">My perspective</p>
+          <h2>Good content starts with understanding the problem.</h2>
+        </div>
 
-        <article class="card">
-          <p class="label">Project 02 · In progress</p>
-          <h3>AI-assisted content workflow</h3>
+        <div class="approach-copy">
           <p>
-            Exploring requirement analysis, style-guide-based
-            drafting, automated review and human approval.
+            Creating documentation is only part of the challenge.
+            We need to understand what people are trying to do,
+            organise information around their needs, make it
+            discoverable, and keep it useful as products evolve.
           </p>
-          <p>Coming soon</p>
-        </article>
+          <p>
+            That means listening to customers, working closely
+            with product and engineering teams, and treating
+            content quality as an ongoing responsibility.
+          </p>
+          <p>
+            AI opens up new possibilities for requirement analysis,
+            drafting and review. The opportunity is not simply to
+            produce more content, but to improve the quality,
+            consistency and usefulness of the knowledge we deliver.
+          </p>
+        </div>
 
-        <article class="card">
-          <p class="label">Project 03 · Planned</p>
-          <h3>Documentation in action</h3>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="work">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">Selected work</p>
+          <h2>Ideas put into practice.</h2>
           <p>
-            A video tutorial demonstrating how a developer
-            uses the API to solve a real task.
+            Case studies connecting customer needs, content
+            operations and technology. Each project will show
+            the problem, the decisions, the deliverables and
+            the evidence behind the outcome.
           </p>
-          <p>Coming soon</p>
-        </article>
+        </div>
+
+        <div class="case-studies">
+
+          <article class="case-card">
+            <div class="case-visual">
+              <span class="case-number">01 / KNOWLEDGE EXPERIENCE</span>
+              <strong>Helping customers find the right answer.</strong>
+            </div>
+            <div class="case-content">
+              <span class="status">Professional experience</span>
+              <h3>Improving knowledge discovery</h3>
+              <p>
+                How customer feedback on search results informed
+                an authoring-platform change, and how search
+                analytics can guide continuous content improvement.
+              </p>
+              <a class="case-link" href="#about">
+                About my approach →
+              </a>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-visual dark">
+              <span class="case-number">02 / AI CONTENT OPERATIONS</span>
+              <strong>From requirements to reviewed content.</strong>
+            </div>
+            <div class="case-content">
+              <span class="status">Professional experience</span>
+              <h3>Multi-agent documentation workflows</h3>
+              <p>
+                A closer look at requirement analysis from Jira,
+                style-guide-based drafting, and review against
+                criteria informed by Product Managers and
+                Sales Engineers.
+              </p>
+              <a class="case-link" href="#about">
+                Explore my approach →
+              </a>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-visual sand">
+              <span class="case-number">03 / DEVELOPER EXPERIENCE</span>
+              <strong>Documentation that works with the API.</strong>
+            </div>
+            <div class="case-content">
+              <span class="status">Portfolio project · In development</span>
+              <h3>Knowledge Hub API</h3>
+              <p>
+                A fictional working API with task-oriented
+                developer documentation, OpenAPI, testable
+                examples and a walkthrough video.
+              </p>
+              <a class="case-link" href="knowledge-hub.html">
+                View the project →
+              </a>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-visual">
+              <span class="case-number">04 / CUSTOMER KNOWLEDGE</span>
+              <strong>Making useful knowledge easier to access.</strong>
+            </div>
+            <div class="case-content">
+              <span class="status">Professional experience</span>
+              <h3>AI-powered knowledge experiences</h3>
+              <p>
+                Working with Support to identify recurring
+                customer questions and shape use cases,
+                troubleshooting FAQs and best-practice guidance
+                for a knowledge agent.
+              </p>
+              <a class="case-link" href="#about">
+                About my approach →
+              </a>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
 
     <section class="section" id="about">
-      <h2>About me</h2>
-      <p>
-        I am a technical communication and knowledge management
-        professional with experience in content strategy,
-        team leadership, structured authoring, documentation
-        platforms and AI-assisted workflows.
-      </p>
-      <p>
-        This portfolio is a space to test ideas, document
-        decisions, and demonstrate how content and technology
-        can work together.
-      </p>
-      <div class="note">
-        <strong>My working principle</strong>
-        <p>
-          Start with the user's problem. Design the content
-          around the task. Validate the result. Improve it
-          using evidence.
-        </p>
+      <div class="container about-grid">
+
+        <div>
+          <p class="section-label">Experience & approach</p>
+          <h2>Built on experience. Open to better ways of working.</h2>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            My background spans technical communication,
+            structured authoring, content governance,
+            documentation platforms, customer feedback and
+            team leadership. I currently lead a team of six
+            technical writers at Skyhigh Security.
+          </p>
+          <p>
+            My work increasingly involves the systems and
+            processes around content: how teams collaborate,
+            how knowledge is reviewed and maintained, and
+            how AI can support that work without replacing
+            technical validation or editorial judgement.
+          </p>
+
+          <div class="capabilities">
+            <span>Content Strategy</span>
+            <span>Knowledge Management</span>
+            <span>Structured Authoring</span>
+            <span>API Documentation</span>
+            <span>AI-Assisted Workflows</span>
+            <span>Team Leadership</span>
+            <span>Customer Experience</span>
+            <span>Content Governance</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-inner">
+        <div>
+          <p class="eyebrow">Connect</p>
+          <h2>Let's talk about better knowledge experiences.</h2>
+          <p>Content strategy, knowledge systems and AI-enabled content operations.</p>
+        </div>
+
+        <a class="button button-primary"
+           href="https://www.linkedin.com/in/geethabg/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Connect on LinkedIn ↗
+        </a>
       </div>
     </section>
   </main>
 
   <footer>
-    Geetha B.G. · Knowledge, content and AI
+    <div class="container footer-inner">
+      <span>© Geetha B.G. · Content & Knowledge Strategy</span>
+      <a href="#home">Back to top ↑</a>
+    </div>
   </footer>
 
 </body>
