@@ -9,140 +9,485 @@
 
 <style>
 :root {
-  --navy:#10213d;
-  --blue:#3478f6;
-  --pale:#edf3ff;
-  --text:#29374b;
-  --muted:#68778d;
-  --line:#dfe6f0;
-  --white:#fff;
-  --bg:#f6f8fc;
-  --radius:18px;
+  --navy: #10213d;
+  --blue: #3478f6;
+  --pale: #edf3ff;
+  --text: #29374b;
+  --muted: #68778d;
+  --line: #dfe6f0;
+  --white: #fff;
+  --bg: #f6f8fc;
+  --radius: 18px;
 }
-* {box-sizing:border-box;margin:0;padding:0}
-html {scroll-behavior:smooth;scroll-padding-top:90px}
-body {font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-a {color:var(--blue);text-decoration:none}
-a:hover {text-decoration:underline}
-.container {width:min(1120px,90%);margin:auto}
-.navbar {position:sticky;top:0;z-index:10;background:#ffffffef;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav-inner {min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand {font-weight:800;font-size:1.15rem;color:var(--navy)}
-.nav-links {display:flex;flex-wrap:wrap;gap:18px}
-.nav-links a {font-size:.86rem;font-weight:700;color:var(--text)}
-.hero {background:radial-gradient(circle at 85% 20%,#3d6fbf65,transparent 30%),linear-gradient(130deg,#10213d,#1c477c);color:white;padding:90px 0}
-.hero-grid {display:grid;grid-template-columns:1.7fr .8fr;align-items:center;gap:55px}
-.eyebrow,.section-label {font-size:.78rem;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
-.eyebrow {color:#a9c7ff;margin-bottom:18px}
-.hero h1 {font-size:clamp(2.5rem,5vw,4.1rem);line-height:1.12;letter-spacing:-1.5px;margin-bottom:22px}
-.hero h2 {font-size:clamp(1.3rem,2.5vw,1.8rem);line-height:1.4;color:#dce8ff;margin-bottom:20px}
-.hero p {color:#e1e9f6;margin-bottom:27px;max-width:740px}
-.actions,.contact-links {display:flex;flex-wrap:wrap;gap:12px}
-.btn {display:inline-block;border-radius:9px;padding:12px 19px;font-weight:700;font-size:.92rem}
-.btn-primary {background:white;color:var(--navy)}
-.btn-outline {border:1px solid #ffffff80;color:white}
-.profile-card {text-align:center;padding:28px 22px;background:#ffffff12;border:1px solid #ffffff35;border-radius:24px}
-.avatar {height:125px;width:125px;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;background:linear-gradient(135deg,#80adff,#345b9b);border:4px solid #ffffff50;font-size:2.5rem;font-weight:800}
-.profile-card h3 {margin-bottom:5px}
-.profile-card p {font-size:.9rem;margin:0}
-.profile-tag {display:inline-block;margin-top:15px;background:#ffffff18;padding:5px 12px;border-radius:30px;font-size:.8rem}
-section {padding:78px 0}
-.section-heading {max-width:790px;margin-bottom:34px}
-.section-label {color:var(--blue);margin-bottom:9px}
-.section-heading h2 {color:var(--navy);font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.25;letter-spacing:-.7px;margin-bottom:13px}
-.section-heading p {color:var(--muted)}
-.white-section {background:white}
-.card,.case-study {background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 26px #10213d0a}
-.card {padding:25px}
-.card h3 {font-size:1.17rem;color:var(--navy);line-height:1.4;margin-bottom:10px}
-.card p {margin-bottom:12px}
-.card p:last-child {margin-bottom:0}
 
-/* Visual illustrations embedded in HTML */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { width: min(1120px, 90%); margin: auto; }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffffef;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.nav-links { display: flex; flex-wrap: wrap; gap: 18px; }
+
+.nav-links a {
+  font-size: .86rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 85% 20%, #3d6fbf65, transparent 30%),
+    linear-gradient(130deg, #10213d, #1c477c);
+  color: white;
+  padding: 90px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.7fr .8fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.eyebrow, .section-label {
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.eyebrow { color: #a9c7ff; margin-bottom: 18px; }
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4.1rem);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin-bottom: 22px;
+}
+
+.hero h2 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  line-height: 1.4;
+  color: #dce8ff;
+  margin-bottom: 20px;
+}
+
+.hero p { color: #e1e9f6; margin-bottom: 27px; max-width: 740px; }
+
+.actions, .contact-links { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.btn {
+  display: inline-block;
+  border-radius: 9px;
+  padding: 12px 19px;
+  font-weight: 700;
+  font-size: .92rem;
+}
+
+.btn-primary { background: white; color: var(--navy); }
+.btn-outline { border: 1px solid #ffffff80; color: white; }
+
+.profile-card {
+  text-align: center;
+  padding: 28px 22px;
+  background: #ffffff12;
+  border: 1px solid #ffffff35;
+  border-radius: 24px;
+}
+
+.avatar {
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  background: linear-gradient(135deg, #80adff, #345b9b);
+  border: 4px solid #ffffff50;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.profile-card h3 { margin-bottom: 5px; }
+.profile-card p { font-size: .9rem; margin: 0; }
+
+.profile-tag {
+  display: inline-block;
+  margin-top: 15px;
+  background: #ffffff18;
+  padding: 5px 12px;
+  border-radius: 30px;
+  font-size: .8rem;
+}
+
+section { padding: 78px 0; }
+.white-section { background: white; }
+
+.section-heading { max-width: 790px; margin-bottom: 34px; }
+.section-label { color: var(--blue); margin-bottom: 9px; }
+
+.section-heading h2 {
+  color: var(--navy);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.25;
+  letter-spacing: -.7px;
+  margin-bottom: 13px;
+}
+
+.section-heading p { color: var(--muted); }
+
+.card, .case-study {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 26px #10213d0a;
+}
+
+.card { padding: 25px; }
+.card h3 { font-size: 1.17rem; color: var(--navy); line-height: 1.4; margin-bottom: 10px; }
+.card p { margin-bottom: 12px; }
+.card p:last-child { margin-bottom: 0; }
+
+/* FIX: illustrations, labels and titles occupy separate layout areas */
 .visual {
-  min-height:155px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  position:relative;
-  background:linear-gradient(135deg,#e9f1ff,#f7f9ff);
-  border-bottom:1px solid var(--line);
+  min-height: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 10px 16px 8px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e9f1ff, #f7f9ff);
+  border-bottom: 1px solid var(--line);
 }
-.visual svg {width:100%;height:155px;max-width:320px}
-.visual .visual-tag {
-  position:absolute;left:15px;top:14px;
-  background:#ffffffdf;color:#28446e;border:1px solid #dce7fa;
-  padding:5px 10px;border-radius:30px;font-size:.72rem;font-weight:800;
+
+.visual-tag {
+  display: block;
+  position: static;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  max-width: 100%;
+  color: #28446e;
+  background: #ffffffdc;
+  border: 1px solid #dce7fa;
+  padding: 3px 9px;
+  border-radius: 30px;
+  font-size: .68rem;
+  font-weight: 800;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
-.case-header {padding:25px 28px;background:linear-gradient(120deg,#edf3ff,#fafcff);border-bottom:1px solid var(--line)}
-.case-header h3 {font-size:1.3rem;color:var(--navy);line-height:1.4;margin-bottom:8px}
-.case-header p {color:var(--muted)}
-.case-body {padding:28px}
-.case-body h4 {color:var(--navy);margin:22px 0 7px;font-size:1rem}
-.case-body h4:first-child {margin-top:0}
-.case-body p {margin-bottom:12px}
-.case-body ul {padding-left:21px;margin:9px 0 16px}
-.case-body li {margin-bottom:8px}
-.value-note {margin-top:20px;padding:17px 19px;background:#f1f6ff;border-left:4px solid var(--blue);border-radius:0 10px 10px 0}
-.value-note strong {color:var(--navy)}
-.note {font-size:.85rem;color:var(--muted);margin-top:12px}
-.work-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}
-.work-card {display:flex;flex-direction:column}
-.work-content {padding:24px;display:flex;flex-direction:column;flex:1}
-.category {display:inline-block;align-self:flex-start;background:var(--pale);color:#285bb1;padding:5px 10px;border-radius:30px;font-size:.75rem;font-weight:800;margin-bottom:13px}
-.work-content h3 {font-size:1.2rem;color:var(--navy);line-height:1.4;margin-bottom:11px}
-.work-content p {margin-bottom:12px}
-.work-content ul {padding-left:20px;margin:5px 0 14px}
-.work-content li {margin-bottom:7px}
-.card-footer {margin-top:auto;padding-top:12px;font-size:.83rem;color:var(--muted)}
-.ai-section {background:#edf2fa}
-.workflow-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:23px}
-.workflow-card {background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.workflow-card .visual {min-height:125px}
-.workflow-card .visual svg {height:125px}
-.workflow-copy {padding:24px}
-.workflow-copy h3 {color:var(--navy);margin-bottom:10px}
-.workflow-copy ul {padding-left:20px;margin-top:10px}
-.workflow-copy li {margin-bottom:7px}
-.human-review {margin-top:22px;padding:21px 23px;border-radius:12px;background:var(--navy);color:white}
-.human-review strong {color:#a9c7ff}
-.approach-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.approach-card {background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.approach-card .visual {min-height:125px}
-.approach-card .visual svg {height:125px}
-.approach-copy {padding:22px}
-.approach-copy h3 {color:var(--navy);margin-bottom:8px;font-size:1.05rem}
-.about-grid {display:grid;grid-template-columns:1.15fr .85fr;gap:25px;align-items:start}
-.about-copy p {margin-bottom:16px}
-.skills-card h3,.background-card h3 {color:var(--navy);margin-bottom:15px}
-.skill-list {display:flex;flex-wrap:wrap;gap:8px}
-.skill {padding:6px 10px;background:#f0f4fa;border:1px solid #e1e8f2;border-radius:7px;font-size:.81rem;color:#34445c}
-.background-card {margin-top:20px}
-.experience-item {padding:13px 0;border-bottom:1px solid var(--line)}
-.experience-item:last-child {border-bottom:0}
-.experience-item strong {display:block;color:var(--navy)}
-.experience-item span {font-size:.9rem;color:var(--muted)}
-.contact {background:linear-gradient(130deg,#10213d,#1c477c);color:white}
-.contact .section-label {color:#a9c7ff}
-.contact .section-heading h2 {color:white}
-.contact .section-heading p {color:#dce6f5}
-.contact-link {display:inline-block;color:white;border:1px solid #ffffff65;padding:12px 17px;border-radius:9px;font-weight:700}
-.contact-link:hover {background:#ffffff12;text-decoration:none}
-footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-size:.84rem}
+
+.visual svg {
+  display: block;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 0;
+  min-height: 0;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.case-study { overflow: hidden; margin-bottom: 24px; }
+
+.case-header {
+  padding: 25px 28px;
+  background: linear-gradient(120deg, #edf3ff, #fafcff);
+  border-bottom: 1px solid var(--line);
+}
+
+.case-header h3 {
+  font-size: 1.3rem;
+  color: var(--navy);
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  margin-bottom: 8px;
+}
+
+.case-header p { color: var(--muted); }
+
+.case-body { padding: 28px; }
+.case-body h4 { color: var(--navy); margin: 22px 0 7px; font-size: 1rem; }
+.case-body h4:first-child { margin-top: 0; }
+.case-body p { margin-bottom: 12px; }
+.case-body ul { padding-left: 21px; margin: 9px 0 16px; }
+.case-body li { margin-bottom: 8px; }
+
+.value-note {
+  margin-top: 20px;
+  padding: 17px 19px;
+  background: #f1f6ff;
+  border-left: 4px solid var(--blue);
+  border-radius: 0 10px 10px 0;
+}
+
+.value-note strong { color: var(--navy); }
+.note { font-size: .85rem; color: var(--muted); margin-top: 12px; }
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 23px;
+  align-items: stretch;
+}
+
+.work-card { display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+
+.work-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.category {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--pale);
+  color: #285bb1;
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-size: .75rem;
+  font-weight: 800;
+  margin-bottom: 13px;
+}
+
+.work-content h3 {
+  font-size: 1.2rem;
+  color: var(--navy);
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  margin-bottom: 11px;
+}
+
+.work-content p { margin-bottom: 12px; }
+.work-content ul { padding-left: 20px; margin: 5px 0 14px; }
+.work-content li { margin-bottom: 7px; }
+
+.card-footer {
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: .83rem;
+  color: var(--muted);
+}
+
+.ai-section { background: #edf2fa; }
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 23px;
+}
+
+.workflow-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.workflow-card .visual { height: 145px; min-height: 145px; }
+.workflow-copy { padding: 24px; }
+.workflow-copy h3 { color: var(--navy); margin-bottom: 10px; }
+.workflow-copy ul { padding-left: 20px; margin-top: 10px; }
+.workflow-copy li { margin-bottom: 7px; }
+
+.human-review {
+  margin-top: 22px;
+  padding: 21px 23px;
+  border-radius: 12px;
+  background: var(--navy);
+  color: white;
+}
+
+.human-review strong { color: #a9c7ff; }
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.approach-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.approach-card .visual { height: 140px; min-height: 140px; }
+.approach-copy { padding: 22px; }
+.approach-copy h3 { color: var(--navy); margin-bottom: 8px; font-size: 1.05rem; }
+
+/* About and skills */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.about-copy p { margin-bottom: 16px; }
+
+.skills-card h3, .background-card h3 {
+  color: var(--navy);
+  margin-bottom: 15px;
+}
+
+.skills-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 17px;
+}
+
+.skills-heading h3 { margin: 0; }
+
+.heading-icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  background: var(--pale);
+  border: 1px solid #dce7fa;
+  border-radius: 10px;
+}
+
+.heading-icon svg { display: block; width: 24px; height: 24px; }
+
+.skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.skill {
+  padding: 6px 10px;
+  background: #f0f4fa;
+  border: 1px solid #e1e8f2;
+  border-radius: 7px;
+  font-size: .81rem;
+  color: #34445c;
+}
+
+.background-card { margin-top: 20px; }
+.experience-item { padding: 13px 0; border-bottom: 1px solid var(--line); }
+.experience-item:last-child { border-bottom: 0; }
+.experience-item strong { display: block; color: var(--navy); }
+.experience-item span { font-size: .9rem; color: var(--muted); }
+
+/* Contact */
+.contact {
+  background: linear-gradient(130deg, #10213d, #1c477c);
+  color: white;
+}
+
+.contact .section-label { color: #a9c7ff; }
+.contact .section-heading h2 { color: white; }
+.contact .section-heading p { color: #dce6f5; }
+
+.contact-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  max-width: 760px;
+}
+
+.contact-illustration {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ffffff45;
+  border-radius: 14px;
+  background: #ffffff12;
+}
+
+.contact-illustration svg { display: block; width: 32px; height: 32px; }
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: white;
+  border: 1px solid #ffffff65;
+  padding: 11px 16px;
+  border-radius: 9px;
+  font-size: .92rem;
+  font-weight: 700;
+}
+
+.contact-link svg { width: 19px; height: 19px; flex: 0 0 19px; }
+.contact-link:hover { background: #ffffff12; text-decoration: none; }
+.contact-links { margin-top: 24px; }
+
+footer {
+  background: #0b1830;
+  color: #b8c7dc;
+  text-align: center;
+  padding: 23px;
+  font-size: .84rem;
+}
+
 @media(max-width:850px) {
- .hero-grid,.about-grid {grid-template-columns:1fr}
- .profile-card {max-width:420px}
- .nav-inner {padding:13px 0;align-items:flex-start;flex-direction:column}
- .approach-grid {grid-template-columns:1fr}
+  .hero-grid, .about-grid { grid-template-columns: 1fr; }
+  .profile-card { max-width: 420px; }
+  .nav-inner { padding: 13px 0; align-items: flex-start; flex-direction: column; }
+  .approach-grid { grid-template-columns: 1fr; }
 }
+
 @media(max-width:620px) {
- section {padding:58px 0}
- .hero {padding:65px 0}
- .work-grid,.workflow-grid {grid-template-columns:1fr}
- .case-header,.case-body,.card {padding:21px}
- .nav-links {gap:10px 14px}
- .nav-links a {font-size:.8rem}
+  section { padding: 58px 0; }
+  .hero { padding: 65px 0; }
+  .work-grid, .workflow-grid { grid-template-columns: 1fr; }
+  .case-header, .case-body, .card, .work-content { padding: 21px; }
+  .nav-links { gap: 10px 14px; }
+  .nav-links a { font-size: .8rem; }
+  .visual { height: 165px; min-height: 165px; }
+  .contact-intro { gap: 12px; }
+  .contact-illustration { width: 44px; height: 44px; flex-basis: 44px; }
+  .contact-illustration svg { width: 27px; height: 27px; }
 }
 </style>
 </head>
@@ -203,16 +548,15 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
     <article class="case-study">
       <div class="visual">
         <span class="visual-tag">People · Growth · Collaboration</span>
-        <svg viewBox="0 0 320 155" role="img" aria-label="Illustration of a team working together">
-          <circle cx="160" cy="72" r="54" fill="#dbe8ff"/>
-          <rect x="68" y="102" width="184" height="24" rx="8" fill="#a9c6ff"/>
-          <circle cx="111" cy="57" r="15" fill="#3478f6"/>
-          <path d="M83 101 Q85 72 111 73 Q137 73 139 101Z" fill="#3478f6"/>
-          <circle cx="160" cy="43" r="17" fill="#18365e"/>
-          <path d="M130 100 Q132 65 160 65 Q188 65 190 100Z" fill="#18365e"/>
-          <circle cx="209" cy="58" r="15" fill="#70a1ff"/>
-          <path d="M181 101 Q183 73 209 73 Q235 73 237 101Z" fill="#70a1ff"/>
-          <rect x="143" y="111" width="34" height="5" rx="2" fill="#fff"/>
+        <svg viewBox="0 0 320 115" role="img" aria-label="Team collaboration illustration">
+          <circle cx="160" cy="55" r="48" fill="#dbe8ff"/>
+          <rect x="68" y="90" width="184" height="18" rx="7" fill="#a9c6ff"/>
+          <circle cx="111" cy="43" r="13" fill="#3478f6"/>
+          <path d="M85 88 Q87 61 111 61 Q135 61 137 88Z" fill="#3478f6"/>
+          <circle cx="160" cy="30" r="15" fill="#18365e"/>
+          <path d="M133 88 Q135 49 160 49 Q185 49 187 88Z" fill="#18365e"/>
+          <circle cx="209" cy="43" r="13" fill="#70a1ff"/>
+          <path d="M183 88 Q185 61 209 61 Q233 61 235 88Z" fill="#70a1ff"/>
         </svg>
       </div>
       <div class="case-header">
@@ -221,43 +565,23 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
       </div>
       <div class="case-body">
         <h4>Overview</h4>
-        <p>
-          I manage and develop a team of technical writers by combining delivery
-          and workload information, documentation quality feedback, and individual
-          observations. Through one-to-one discussions and ongoing coaching, I
-          identify team strengths and development areas, allocate work thoughtfully,
-          and encourage writers to take initiative, broaden their skills, and share knowledge.
-        </p>
+        <p>I manage and develop a team of technical writers by combining delivery and workload information, documentation quality feedback, and individual observations. Through one-to-one discussions and ongoing coaching, I identify team strengths and development areas, allocate work thoughtfully, and encourage writers to take initiative, broaden their skills, and share knowledge.</p>
+
         <h4>1. Combined data with individual insights</h4>
-        <p>
-          I consider task delivery, workload, quality and review feedback, product
-          knowledge, individual skills, learning progress, and documentation output.
-          I complement available data with observations and one-to-one discussions
-          to understand individual strengths, challenges, and development opportunities.
-        </p>
+        <p>I consider task delivery, workload, quality and review feedback, product knowledge, individual skills, learning progress, and documentation output. I complement available data with observations and one-to-one discussions to understand individual strengths, challenges, and development opportunities.</p>
+
         <h4>2. Aligned work allocation with capabilities and growth</h4>
-        <p>
-          I consider workload, task complexity, product knowledge, and individual
-          strengths when assigning work. I encourage writers to develop new skills
-          and take on unfamiliar challenges while balancing those opportunities with delivery commitments.
-        </p>
+        <p>I consider workload, task complexity, product knowledge, and individual strengths when assigning work. I encourage writers to develop new skills and take on unfamiliar challenges while balancing those opportunities with delivery commitments.</p>
+
         <h4>3. Encouraged initiative and ownership</h4>
-        <p>
-          I encourage team members to suggest improvements, explore better ways
-          to communicate product information, and take ownership beyond routine
-          assignments. Coaching and regular discussions help writers build confidence
-          and contribute ideas to team practices.
-        </p>
+        <p>I encourage team members to suggest improvements, explore better ways to communicate product information, and take ownership beyond routine assignments.</p>
+
         <h4>4. Expanded content creation through videos</h4>
-        <p>
-          I create instructional videos and encourage writers to develop video-based
-          content where visual demonstrations help explain product workflows and features.
-        </p>
+        <p>I create instructional videos and encourage writers to develop video-based content where visual demonstrations help explain product workflows and features.</p>
+
         <h4>5. Promoted regular knowledge sharing</h4>
-        <p>
-          I encourage writers to share product knowledge, lessons learned, useful
-          practices, and approaches through monthly knowledge-sharing sessions.
-        </p>
+        <p>I encourage writers to share product knowledge, lessons learned, useful practices, and approaches through monthly knowledge-sharing sessions.</p>
+
         <div class="value-note"><strong>Value:</strong> More informed work allocation, individual development opportunities, greater ownership, broader content formats, and stronger knowledge sharing across the team.</div>
         <p class="note">This case study describes my leadership approach and does not claim unmeasured performance improvements.</p>
       </div>
@@ -265,7 +589,7 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
   </div>
 </section>
 
-<!-- Selected work: Customer experience is first -->
+<!-- Customer experience is the first case study -->
 <section id="work">
   <div class="container">
     <div class="section-heading">
@@ -275,33 +599,27 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
     </div>
 
     <div class="work-grid">
-
-      <!-- Case study 1 -->
-      <article class="case-study">
+      <article class="case-study work-card">
         <div class="visual">
           <span class="visual-tag">Case Study 01 · Customer Experience</span>
-          <svg viewBox="0 0 320 155" role="img" aria-label="Illustration of search and customer discovery">
-            <circle cx="144" cy="67" r="43" fill="#d7e5ff" stroke="#3478f6" stroke-width="5"/>
-            <circle cx="144" cy="67" r="25" fill="#fff" stroke="#8db3ff" stroke-width="3"/>
-            <path d="M174 99 L207 127" stroke="#18365e" stroke-width="12" stroke-linecap="round"/>
-            <path d="M130 66 L140 76 L159 53" fill="none" stroke="#3478f6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="32" y="24" width="46" height="10" rx="5" fill="#a8c5ff"/>
-            <rect x="32" y="42" width="31" height="7" rx="3" fill="#c3d6ff"/>
-            <rect x="225" y="39" width="52" height="10" rx="5" fill="#a8c5ff"/>
-            <rect x="225" y="56" width="39" height="7" rx="3" fill="#c3d6ff"/>
+          <svg viewBox="0 0 320 115" role="img" aria-label="Search and customer discovery illustration">
+            <circle cx="144" cy="49" r="36" fill="#d7e5ff" stroke="#3478f6" stroke-width="5"/>
+            <circle cx="144" cy="49" r="21" fill="#fff" stroke="#8db3ff" stroke-width="3"/>
+            <path d="M168 75 L198 101" stroke="#18365e" stroke-width="10" stroke-linecap="round"/>
+            <path d="M132 48 L141 57 L157 39" fill="none" stroke="#3478f6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="31" y="22" width="43" height="8" rx="4" fill="#a8c5ff"/>
+            <rect x="31" y="36" width="30" height="6" rx="3" fill="#c3d6ff"/>
+            <rect x="224" y="34" width="48" height="8" rx="4" fill="#a8c5ff"/>
+            <rect x="224" y="48" width="36" height="6" rx="3" fill="#c3d6ff"/>
           </svg>
         </div>
         <div class="work-content">
           <span class="category">Customer Experience Improvement</span>
           <h3>Enhanced Customer Experience Through Better Documentation Search</h3>
-          <p>
-            Customer surveys and internal feedback highlighted opportunities to
-            improve how users searched for and discovered information in the
-            technical documentation portal.
-          </p>
+          <p>Customer surveys and internal feedback highlighted opportunities to improve how users searched for and discovered information in the technical documentation portal.</p>
           <ul>
             <li>Investigated improvements within the existing platform and identified its limitations.</li>
-            <li>Evaluated alternative platforms against search, AI capabilities, integrations, usability, and stakeholder needs.</li>
+            <li>Evaluated alternatives against search, AI capabilities, integrations, usability, and stakeholder needs.</li>
             <li>Coordinated platform selection and the migration of Help content with relevant stakeholders and content owners.</li>
             <li>Helped introduce a platform with enhanced search capabilities and search analytics.</li>
           </ul>
@@ -309,31 +627,26 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
         </div>
       </article>
 
-      <!-- Case study 2 -->
-      <article class="case-study">
+      <article class="case-study work-card">
         <div class="visual">
           <span class="visual-tag">Case Study 02 · AI Workflows</span>
-          <svg viewBox="0 0 320 155" role="img" aria-label="Illustration of AI-assisted writing">
-            <rect x="83" y="20" width="154" height="112" rx="12" fill="#fff" stroke="#a8c5ff" stroke-width="3"/>
-            <rect x="101" y="37" width="72" height="8" rx="4" fill="#3478f6"/>
-            <rect x="101" y="55" width="117" height="6" rx="3" fill="#cfddf5"/>
-            <rect x="101" y="69" width="103" height="6" rx="3" fill="#cfddf5"/>
-            <rect x="101" y="83" width="111" height="6" rx="3" fill="#cfddf5"/>
-            <circle cx="213" cy="103" r="20" fill="#3478f6"/>
-            <path d="M213 90 L216 100 L226 103 L216 106 L213 116 L210 106 L200 103 L210 100Z" fill="#fff"/>
-            <path d="M59 45 L66 52 L79 35" fill="none" stroke="#3478f6" stroke-width="5" stroke-linecap="round"/>
+          <svg viewBox="0 0 320 115" role="img" aria-label="AI-assisted writing illustration">
+            <rect x="83" y="10" width="154" height="98" rx="11" fill="#fff" stroke="#a8c5ff" stroke-width="3"/>
+            <rect x="101" y="25" width="72" height="7" rx="3" fill="#3478f6"/>
+            <rect x="101" y="40" width="117" height="5" rx="2" fill="#cfddf5"/>
+            <rect x="101" y="52" width="103" height="5" rx="2" fill="#cfddf5"/>
+            <rect x="101" y="64" width="111" height="5" rx="2" fill="#cfddf5"/>
+            <circle cx="213" cy="86" r="17" fill="#3478f6"/>
+            <path d="M213 76 L216 83 L223 86 L216 89 L213 96 L210 89 L203 86 L210 83Z" fill="#fff"/>
           </svg>
         </div>
         <div class="work-content">
           <span class="category">AI-Assisted Documentation</span>
           <h3>Built AI-Assisted Documentation Workflows</h3>
-          <p>
-            I helped shape AI-assisted workflows that support requirements analysis,
-            preliminary drafting, and content refinement while following documentation standards.
-          </p>
+          <p>I helped shape AI-assisted workflows that support requirements analysis, preliminary drafting, and content refinement while following documentation standards.</p>
           <ul>
-            <li>Configured Gemini Gem instructions for writing style, approved product terminology, required sections, and author review.</li>
-            <li>Used Copilot and Gemini to summarise product information, analyse changes, draft content, and check clarity and consistency.</li>
+            <li>Configured Gemini Gem instructions for writing style, approved terminology, required sections, and author review.</li>
+            <li>Used Copilot and Gemini to summarise product information, analyse changes, draft content, and check consistency.</li>
             <li>Used an Atlassian AI Agent to analyse Jira stories, subtasks, and linked issues for preliminary documentation impacts.</li>
             <li>Helped team members understand how to structure instructions for the intended workflow.</li>
           </ul>
@@ -341,24 +654,20 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
         </div>
       </article>
 
-      <!-- Case study 3 -->
-      <article class="case-study">
+      <article class="case-study work-card">
         <div class="visual">
           <span class="visual-tag">Case Study 03 · Analytics</span>
-          <svg viewBox="0 0 320 155" role="img" aria-label="Illustration of documentation analytics">
-            <rect x="55" y="18" width="210" height="120" rx="12" fill="#fff" stroke="#cbdafa" stroke-width="3"/>
-            <path d="M83 111 L83 91 L110 91 L110 111 M127 111 L127 70 L154 70 L154 111 M171 111 L171 48 L198 48 L198 111 M215 111 L215 31 L242 31 L242 111" fill="#8fb4ff"/>
-            <path d="M76 80 L118 63 L147 74 L183 43 L229 28" fill="none" stroke="#18365e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="229" cy="28" r="5" fill="#3478f6"/>
+          <svg viewBox="0 0 320 115" role="img" aria-label="Documentation analytics illustration">
+            <rect x="55" y="8" width="210" height="100" rx="11" fill="#fff" stroke="#cbdafa" stroke-width="3"/>
+            <path d="M80 90 V73 H106 V90 M121 90 V56 H147 V90 M162 90 V39 H188 V90 M203 90 V23 H229 V90" fill="#8fb4ff"/>
+            <path d="M76 63 L114 48 L145 57 L181 31 L225 19" fill="none" stroke="#18365e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="225" cy="19" r="4" fill="#3478f6"/>
           </svg>
         </div>
         <div class="work-content">
           <span class="category">Documentation Analytics</span>
           <h3>Used Documentation Analytics to Guide Content Improvement</h3>
-          <p>
-            I monitor documentation usage to understand which topics attract
-            customer attention and to inform discussions about content needs.
-          </p>
+          <p>I monitor documentation usage to understand which topics attract customer attention and to inform discussions about content needs.</p>
           <ul>
             <li>Review page views and identify frequently accessed topics.</li>
             <li>Share analytics during product meetings and with stakeholders.</li>
@@ -369,29 +678,25 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
         </div>
       </article>
 
-      <!-- Case study 4 -->
-      <article class="case-study">
+      <article class="case-study work-card">
         <div class="visual">
           <span class="visual-tag">Case Study 04 · Knowledge Management</span>
-          <svg viewBox="0 0 320 155" role="img" aria-label="Illustration of a knowledge assistant">
-            <rect x="93" y="26" width="134" height="92" rx="18" fill="#fff" stroke="#a8c5ff" stroke-width="3"/>
-            <rect x="117" y="47" width="86" height="42" rx="10" fill="#e9f1ff"/>
-            <circle cx="140" cy="67" r="5" fill="#3478f6"/>
-            <circle cx="180" cy="67" r="5" fill="#3478f6"/>
-            <path d="M145 79 Q160 91 175 79" fill="none" stroke="#3478f6" stroke-width="3" stroke-linecap="round"/>
-            <path d="M160 26 V16 M148 16 H172" stroke="#3478f6" stroke-width="4" stroke-linecap="round"/>
-            <path d="M92 62 H72 V93 H91 M228 62 H248 V93 H229" fill="none" stroke="#7fa7f8" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="68" cy="108" r="9" fill="#b9d0ff"/>
-            <circle cx="252" cy="108" r="9" fill="#b9d0ff"/>
+          <svg viewBox="0 0 320 115" role="img" aria-label="Knowledge assistant illustration">
+            <rect x="93" y="13" width="134" height="88" rx="16" fill="#fff" stroke="#a8c5ff" stroke-width="3"/>
+            <rect x="117" y="32" width="86" height="40" rx="10" fill="#e9f1ff"/>
+            <circle cx="140" cy="51" r="4" fill="#3478f6"/>
+            <circle cx="180" cy="51" r="4" fill="#3478f6"/>
+            <path d="M145 63 Q160 74 175 63" fill="none" stroke="#3478f6" stroke-width="3" stroke-linecap="round"/>
+            <path d="M160 13 V5 M149 5 H171" stroke="#3478f6" stroke-width="4" stroke-linecap="round"/>
+            <path d="M92 48 H72 V78 H91 M228 48 H248 V78 H229" fill="none" stroke="#7fa7f8" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="68" cy="93" r="8" fill="#b9d0ff"/>
+            <circle cx="252" cy="93" r="8" fill="#b9d0ff"/>
           </svg>
         </div>
         <div class="work-content">
           <span class="category">AI-Powered Self-Service</span>
           <h3>Prepared Knowledge for AI-Powered Self-Service</h3>
-          <p>
-            I work with Support to identify customer pain points and prepare useful
-            documentation knowledge for an AI-powered customer agent.
-          </p>
+          <p>I work with Support to identify customer pain points and prepare useful documentation knowledge for an AI-powered customer agent.</p>
           <ul>
             <li>Identify frequently asked questions, use cases, and best practices with Support stakeholders.</li>
             <li>Help ensure relevant product documentation is available as a knowledge source.</li>
@@ -401,7 +706,6 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
           <div class="card-footer"><strong>Value:</strong> Better-prepared documentation for AI-supported customer knowledge experiences.</div>
         </div>
       </article>
-
     </div>
   </div>
 </section>
@@ -412,24 +716,20 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
     <div class="section-heading">
       <div class="section-label">AI &amp; Workflows</div>
       <h2>Leverage AI to Streamline Documentation Workflows</h2>
-      <p>
-        I help define practical AI-assisted workflows that support content analysis
-        and drafting while retaining technical writers' responsibility for accuracy,
-        context, and final approval.
-      </p>
+      <p>I help define practical AI-assisted workflows that support content analysis and drafting while retaining technical writers' responsibility for accuracy, context, and final approval.</p>
     </div>
 
     <div class="workflow-grid">
       <article class="workflow-card">
         <div class="visual">
-          <svg viewBox="0 0 320 125" role="img" aria-label="Illustration of AI writing guidance">
-            <rect x="76" y="14" width="168" height="96" rx="10" fill="#fff" stroke="#a8c5ff" stroke-width="3"/>
-            <rect x="94" y="31" width="83" height="7" rx="3" fill="#3478f6"/>
-            <rect x="94" y="47" width="130" height="5" rx="2" fill="#cfddf5"/>
-            <rect x="94" y="60" width="115" height="5" rx="2" fill="#cfddf5"/>
-            <rect x="94" y="73" width="121" height="5" rx="2" fill="#cfddf5"/>
-            <circle cx="222" cy="89" r="14" fill="#3478f6"/>
-            <path d="M222 80 L225 87 L232 89 L225 92 L222 99 L219 92 L212 89 L219 87Z" fill="#fff"/>
+          <svg viewBox="0 0 320 95" role="img" aria-label="AI content development illustration">
+            <rect x="76" y="5" width="168" height="85" rx="10" fill="#fff" stroke="#a8c5ff" stroke-width="3"/>
+            <rect x="94" y="19" width="83" height="6" rx="3" fill="#3478f6"/>
+            <rect x="94" y="33" width="130" height="5" rx="2" fill="#cfddf5"/>
+            <rect x="94" y="45" width="115" height="5" rx="2" fill="#cfddf5"/>
+            <rect x="94" y="57" width="121" height="5" rx="2" fill="#cfddf5"/>
+            <circle cx="222" cy="75" r="12" fill="#3478f6"/>
+            <path d="M222 68 L225 73 L230 75 L225 77 L222 82 L219 77 L214 75 L219 73Z" fill="#fff"/>
           </svg>
         </div>
         <div class="workflow-copy">
@@ -446,17 +746,16 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
 
       <article class="workflow-card">
         <div class="visual">
-          <svg viewBox="0 0 320 125" role="img" aria-label="Illustration of a human reviewing a document">
-            <rect x="49" y="20" width="108" height="84" rx="8" fill="#fff" stroke="#a8c5ff" stroke-width="3"/>
-            <path d="M66 41 H139 M66 55 H133 M66 69 H125" stroke="#b6cbed" stroke-width="5" stroke-linecap="round"/>
-            <circle cx="206" cy="59" r="28" fill="#dbe8ff"/>
-            <path d="M192 59 L202 69 L222 46" fill="none" stroke="#3478f6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M168 94 L181 80" stroke="#18365e" stroke-width="5" stroke-linecap="round"/>
+          <svg viewBox="0 0 320 95" role="img" aria-label="Human content review illustration">
+            <rect x="49" y="9" width="108" height="78" rx="8" fill="#fff" stroke="#a8c5ff" stroke-width="3"/>
+            <path d="M66 28 H139 M66 41 H133 M66 54 H125" stroke="#b6cbed" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="206" cy="46" r="27" fill="#dbe8ff"/>
+            <path d="M192 46 L202 56 L222 33" fill="none" stroke="#3478f6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <div class="workflow-copy">
           <h3>Structured guidance and human review</h3>
-          <p>Clear instructions help keep AI-assisted work aligned with product needs, audience expectations, and documentation standards.</p>
+          <p>Clear instructions keep AI-assisted work aligned with product needs, audience expectations, and documentation standards.</p>
           <ul>
             <li>Approved terminology and style guidance</li>
             <li>Defined content structures and required sections</li>
@@ -487,13 +786,13 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
     <div class="approach-grid">
       <article class="approach-card">
         <div class="visual">
-          <svg viewBox="0 0 320 125" role="img" aria-label="Illustration of user needs">
-            <circle cx="160" cy="44" r="20" fill="#8fb4ff"/>
-            <path d="M119 102 Q122 65 160 65 Q198 65 201 102Z" fill="#3478f6"/>
-            <circle cx="224" cy="37" r="16" fill="#d1e1ff"/>
-            <path d="M205 68 Q207 50 224 50 Q241 50 243 68" fill="#7fa7f8"/>
-            <circle cx="95" cy="37" r="16" fill="#d1e1ff"/>
-            <path d="M76 68 Q78 50 95 50 Q112 50 114 68" fill="#7fa7f8"/>
+          <svg viewBox="0 0 320 95" role="img" aria-label="Understanding user goals illustration">
+            <circle cx="160" cy="28" r="16" fill="#8fb4ff"/>
+            <path d="M124 88 Q126 52 160 52 Q194 52 196 88Z" fill="#3478f6"/>
+            <circle cx="222" cy="27" r="13" fill="#d1e1ff"/>
+            <path d="M205 57 Q207 42 222 42 Q237 42 239 57" fill="#7fa7f8"/>
+            <circle cx="98" cy="27" r="13" fill="#d1e1ff"/>
+            <path d="M81 57 Q83 42 98 42 Q113 42 115 57" fill="#7fa7f8"/>
           </svg>
         </div>
         <div class="approach-copy">
@@ -504,12 +803,12 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
 
       <article class="approach-card">
         <div class="visual">
-          <svg viewBox="0 0 320 125" role="img" aria-label="Illustration of evidence and analytics">
-            <rect x="65" y="19" width="190" height="89" rx="10" fill="#fff" stroke="#cbdafa" stroke-width="3"/>
-            <rect x="86" y="70" width="24" height="23" rx="4" fill="#b8d0ff"/>
-            <rect x="122" y="52" width="24" height="41" rx="4" fill="#80aaff"/>
-            <rect x="158" y="39" width="24" height="54" rx="4" fill="#3478f6"/>
-            <rect x="194" y="28" width="24" height="65" rx="4" fill="#18365e"/>
+          <svg viewBox="0 0 320 95" role="img" aria-label="Evidence and analytics illustration">
+            <rect x="65" y="5" width="190" height="85" rx="10" fill="#fff" stroke="#cbdafa" stroke-width="3"/>
+            <rect x="86" y="57" width="24" height="24" rx="4" fill="#b8d0ff"/>
+            <rect x="122" y="39" width="24" height="42" rx="4" fill="#80aaff"/>
+            <rect x="158" y="26" width="24" height="55" rx="4" fill="#3478f6"/>
+            <rect x="194" y="15" width="24" height="66" rx="4" fill="#18365e"/>
           </svg>
         </div>
         <div class="approach-copy">
@@ -520,14 +819,14 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
 
       <article class="approach-card">
         <div class="visual">
-          <svg viewBox="0 0 320 125" role="img" aria-label="Illustration of a repeatable process">
-            <rect x="54" y="30" width="55" height="58" rx="9" fill="#dbe8ff" stroke="#9bbaff" stroke-width="2"/>
-            <rect x="132" y="30" width="55" height="58" rx="9" fill="#a9c6ff" stroke="#7ea5f4" stroke-width="2"/>
-            <rect x="210" y="30" width="55" height="58" rx="9" fill="#3478f6"/>
-            <path d="M111 59 H129 M189 59 H207" stroke="#18365e" stroke-width="4" stroke-linecap="round"/>
-            <path d="M123 53 L130 59 L123 65 M201 53 L208 59 L201 65" fill="none" stroke="#18365e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M70 50 H93 M70 60 H93 M70 70 H87 M147 50 H171 M147 60 H171 M147 70 H165" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-            <path d="M224 59 L234 69 L251 48" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg viewBox="0 0 320 95" role="img" aria-label="Repeatable workflow illustration">
+            <rect x="54" y="20" width="55" height="55" rx="9" fill="#dbe8ff" stroke="#9bbaff" stroke-width="2"/>
+            <rect x="132" y="20" width="55" height="55" rx="9" fill="#a9c6ff" stroke="#7ea5f4" stroke-width="2"/>
+            <rect x="210" y="20" width="55" height="55" rx="9" fill="#3478f6"/>
+            <path d="M111 47 H129 M189 47 H207" stroke="#18365e" stroke-width="4" stroke-linecap="round"/>
+            <path d="M123 41 L130 47 L123 53 M201 41 L208 47 L201 53" fill="none" stroke="#18365e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M70 39 H93 M70 49 H93 M70 59 H87 M147 39 H171 M147 49 H171 M147 59 H165" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+            <path d="M224 47 L234 57 L251 36" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <div class="approach-copy">
@@ -549,25 +848,9 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
 
     <div class="about-grid">
       <div class="about-copy">
-        <p>
-          I am a technical communication professional with more than two decades
-          of experience across enterprise software documentation, product help
-          content, structured authoring, and content operations.
-        </p>
-        <p>
-          At Skyhigh Security, I manage a team of six technical writers supporting
-          documentation across multiple products and monthly releases. My work spans
-          content planning, collaboration with subject-matter experts, documentation
-          quality, customer feedback, platform improvements, team development, and
-          AI-assisted workflows.
-        </p>
-        <p>
-          I combine strong technical writing practices with a broader view of how
-          users discover, understand, and apply product information. I focus on
-          building team capability, encouraging initiative, using data to inform
-          decisions, and establishing repeatable practices that support better
-          knowledge experiences.
-        </p>
+        <p>I am a technical communication professional with more than two decades of experience across enterprise software documentation, product help content, structured authoring, and content operations.</p>
+        <p>At Skyhigh Security, I manage a team of six technical writers supporting documentation across multiple products and monthly releases. My work spans content planning, collaboration with subject-matter experts, documentation quality, customer feedback, platform improvements, team development, and AI-assisted workflows.</p>
+        <p>I combine strong technical writing practices with a broader view of how users discover, understand, and apply product information. I focus on building team capability, encouraging initiative, using data to inform decisions, and establishing repeatable practices that support better knowledge experiences.</p>
 
         <div class="card background-card">
           <h3>Professional Background</h3>
@@ -581,7 +864,18 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
 
       <aside>
         <div class="card skills-card">
-          <h3>Core Skills</h3>
+          <div class="skills-heading">
+            <span class="heading-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#3478f6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 6.5 6.5 9 9 11.5"/>
+                <path d="M15 6.5 17.5 9 15 11.5"/>
+                <path d="m13.5 5-3 8"/>
+                <rect x="3" y="3" width="18" height="18" rx="4"/>
+              </svg>
+            </span>
+            <h3>Core Skills</h3>
+          </div>
+
           <div class="skill-list">
             <span class="skill">Documentation Team Leadership</span>
             <span class="skill">Team Development</span>
@@ -635,16 +929,35 @@ footer {background:#0b1830;color:#b8c7dc;text-align:center;padding:23px;font-siz
   <div class="container">
     <div class="section-heading">
       <div class="section-label">Contact</div>
-      <h2>Let's connect</h2>
-      <p>
-        I welcome conversations about technical communication leadership,
-        documentation strategy, knowledge management, and practical AI
-        applications in content development.
-      </p>
+      <div class="contact-intro">
+        <span class="contact-illustration">
+          <svg viewBox="0 0 32 32" fill="none" stroke="#dce8ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="6" width="26" height="20" rx="4"/>
+            <path d="m5 9 11 9 11-9"/>
+          </svg>
+        </span>
+        <div>
+          <h2>Let's connect</h2>
+          <p>I welcome conversations about technical communication leadership, documentation strategy, knowledge management, and practical AI applications in content development.</p>
+        </div>
+      </div>
     </div>
+
     <div class="contact-links">
-      <a class="contact-link" href="mailto:prasad_geetha@yahoo.com">Email Me</a>
-      <a class="contact-link" href="https://www.linkedin.com/in/geethabg/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      <a class="contact-link" href="mailto:prasad_geetha@yahoo.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="14" rx="3"/>
+          <path d="m4 7 8 6 8-6"/>
+        </svg>
+        Email Me
+      </a>
+
+      <a class="contact-link" href="https://www.linkedin.com/in/geethabg/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M5.2 3.5a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4ZM3.3 9.5h3.8v11H3.3v-11Zm6.1 0H13v1.5h.1c.5-.9 1.7-1.9 3.5-1.9 3.8 0 4.5 2.5 4.5 5.7v5.7h-3.8v-5.1c0-1.2 0-2.8-1.8-2.8s-2.1 1.3-2.1 2.7v5.2H9.4v-11Z"/>
+        </svg>
+        Connect on LinkedIn
+      </a>
     </div>
   </div>
 </section>
