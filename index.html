@@ -86,6 +86,7 @@ h1 {
   display: grid; place-items: center; background: #ffffff20;
   font-size: 2rem; font-weight: 850;
 }
+
 section { padding: 58px 0; }
 .soft { background: var(--soft); }
 .heading { max-width: 900px; margin: 0 auto 28px; text-align: center; }
@@ -95,6 +96,7 @@ section { padding: 58px 0; }
   letter-spacing: -.04em; color: var(--navy); margin: 0 0 14px;
 }
 .intro { color: var(--muted); font-size: 1.05rem; margin: 0 auto; text-align: justify; text-justify: inter-word; }
+
 .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .card {
   min-width: 0; background: white; border: 1px solid var(--line);
@@ -160,7 +162,7 @@ section { padding: 58px 0; }
   padding: 6px 11px; color: #43546c; background: white; font-size: .84rem;
 }
 
-/* Tools & Platforms */
+/* Tools and platforms */
 .tools-grid {
   display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
   gap: 36px; align-items: center;
@@ -187,6 +189,7 @@ section { padding: 58px 0; }
 .footer { background: #071126; color: #aebbd0; padding: 20px 0; font-size: .85rem; }
 .footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
 
+/* Selected Work spacing: reduced gap between introduction and cards */
 #work .heading { max-width: 900px; margin: 0 auto 18px; text-align: center; }
 #work .title { max-width: 850px; margin: 0 auto 16px; line-height: 1.2; text-align: center; }
 #work .intro { max-width: 800px; line-height: 1.7; }
@@ -196,7 +199,7 @@ section { padding: 58px 0; }
 #tools .title { margin: 0 auto 16px; line-height: 1.2; text-align: center; }
 #tools .intro { max-width: 800px; line-height: 1.7; }
 
-/* Layout refinement */
+/* Text alignment */
 .hero-copy,
 .casebody p,
 .casebody li,
@@ -232,6 +235,7 @@ section { padding: 58px 0; }
 }
 </style>
 </head>
+
 <body>
 <header class="header">
   <div class="container nav">
@@ -265,3 +269,330 @@ section { padding: 58px 0; }
     </div>
   </div>
 </section>
+
+<section id="work">
+  <div class="container">
+    <div class="heading">
+      <p class="kicker">Selected work</p>
+      <h2 class="title">Turning Product Knowledge into Better Customer Experiences</h2>
+      <p class="intro">These use cases show how I lead the documentation function, translate product priorities into useful content, develop AI-assisted practices, and work across teams to improve the customer experience. I combine strategic direction with hands-on editorial and writing work.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <span class="num">CASE STUDY 01</span>
+        <h3>Improving documentation search and discoverability</h3>
+        <p>Led the evaluation and transition to a new documentation platform to address customer search needs and improve access to technical information.</p>
+        <div class="tags"><span class="tag">Customer experience</span><span class="tag">Platform migration</span><span class="tag">Search analytics</span></div>
+        <a class="link" href="#search-case">Explore approach →</a>
+      </article>
+      <article class="card">
+        <span class="num">CASE STUDY 02</span>
+        <h3>Building AI-Assisted Documentation Workflows</h3>
+        <p>Developed a structured AI-assisted workflow for product analysis, drafting, and review, while maintaining writer accountability for accuracy, clarity, and final approval.</p>
+        <div class="tags"><span class="tag">AI-assisted authoring</span><span class="tag">Jira</span><span class="tag">Quality review</span></div>
+        <a class="link" href="#ai">Explore approach →</a>
+      </article>
+      <article class="card">
+        <span class="num">CASE STUDY 03</span>
+        <h3>Using Customer and Product Insights to Improve Content</h3>
+        <p>Connects customer feedback, support questions, and available search insights to content analysis and opportunities for better knowledge discovery.</p>
+        <div class="tags"><span class="tag">Documentation analytics</span><span class="tag">Content gaps</span><span class="tag">Customer insights</span></div>
+        <a class="link" href="#analytics">Explore approach →</a>
+      </article>
+      <article class="card">
+        <span class="num">CASE STUDY 04</span>
+        <h3>Preparing documentation for AI-powered customer self-service</h3>
+        <p>Works with Support to strengthen the knowledge base that informs an AI-powered customer agent and its refreshed content index.</p>
+        <div class="tags"><span class="tag">Knowledge readiness</span><span class="tag">Customer self-service</span><span class="tag">Support collaboration</span></div>
+        <a class="link" href="#knowledge-agent">Explore approach →</a>
+      </article>
+      <article class="card">
+        <span class="num">CASE STUDY 05</span>
+        <h3>Leading Product Documentation as a Player-Coach</h3>
+        <p>Own documentation outcomes while developing the team, translating business and product priorities into content plans, and providing hands-on editorial support where it matters most.</p>
+        <div class="tags"><span class="tag">Function ownership</span><span class="tag">Team development</span><span class="tag">Cross-functional leadership</span></div>
+        <a class="link" href="#approach">Explore approach →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="search-case">
+  <div class="container">
+    <div class="heading">
+      <p class="kicker">Case study 01 · Platform transformation</p>
+      <h2 class="title">Enhancing the Customer Experience Through AI-Enabled Documentation Tools</h2>
+      <p class="intro">Led the evaluation and transition to a new documentation platform to improve how customers discover technical information, while establishing a foundation for AI-enabled search and ongoing content improvement.</p>
+    </div>
+    <article class="card case">
+      <div class="casehead">
+        <p class="kicker">Customer experience · Knowledge management · AI</p>
+        <h3>Making technical information easier to find</h3>
+        <p>Role: documentation initiative owner and migration lead, aligning platform decisions with customer needs and business priorities.</p>
+      </div>
+      <div class="casebody">
+        <h4>The challenge</h4>
+        <p>Customer surveys and internal stakeholder feedback highlighted opportunities to improve the search experience on our technical documentation portal. Customers needed a more effective way to discover relevant, accurate information without spending unnecessary time searching.</p>
+        <p>I first explored opportunities to enhance search within the existing platform. However, its functional limitations made it difficult to address the broader requirements, prompting me to initiate a systematic evaluation of alternative authoring platforms.</p>
+        <h4>My approach</h4>
+        <ol>
+          <li><strong>Identified the problem through customer insights.</strong> Used customer survey responses and internal feedback to understand search-related challenges and identify opportunities to improve information discoverability.</li>
+          <li><strong>Evaluated alternative platforms systematically.</strong> Initiated an evaluation of multiple authoring platforms, comparing their fit against existing use cases, search capabilities, AI features, integrations, usability, and stakeholder requirements.</li>
+          <li><strong>Aligned stakeholders around the change.</strong> Coordinated the platform evaluation and migration with content stakeholders, balancing customer needs, operational requirements, and the practical work of moving and maintaining Help content.</li>
+          <li><strong>Enabled AI-powered knowledge discovery.</strong> Transitioned to an AI-powered authoring platform with enhanced search capabilities and search analytics. These capabilities provide a foundation for helping customers find relevant information and understanding search behaviour to identify potential content gaps.</li>
+        </ol>
+        <h4>Value and future opportunities</h4>
+        <ul>
+          <li><strong>Customer experience:</strong> Supports easier access to relevant technical information.</li>
+          <li><strong>Data-informed content improvement:</strong> Search analytics can help reveal customer information needs and potential content gaps.</li>
+          <li><strong>Content operations:</strong> Consolidates Help content on the selected authoring platform.</li>
+          <li><strong>Continuous improvement:</strong> Creates opportunities to use search insights and customer feedback to guide documentation priorities.</li>
+        </ul>
+        <div class="note"><strong>Measurement status:</strong> The impact has not yet been formally measured. Future evaluation can examine search relevance, unsuccessful searches, frequently searched topics, customer feedback, and documentation-related support trends.</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="ai">
+  <div class="container">
+    <div class="heading">
+      <p class="kicker">Case study 02 · AI-assisted workflows</p>
+      <h2 class="title">Developing an AI-Assisted Content Model with Human Editorial Oversight</h2>
+      <p class="intro">I shape a repeatable AI-assisted workflow that helps writers analyse product changes, draft content, and review for completeness. As a player-coach, I guide the approach and directly review, edit, or write content when needed to maintain quality and close gaps.</p>
+    </div>
+    <div class="workflow">
+      <article>
+        <h3>Translate product changes into content priorities</h3>
+        <p>Review Jira stories, subtasks, and linked issues to understand product changes, identify documentation implications, and connect delivery priorities to the information customers need.</p>
+      </article>
+      <article>
+        <h3>Guide AI-assisted first drafts</h3>
+        <p>Use defined prompts, product terminology, and content standards to generate a starting draft that writers can validate, refine, and adapt for the intended audience.</p>
+      </article>
+      <article>
+        <h3>Apply editorial and information-architecture judgement</h3>
+        <p>Review structure, terminology, completeness, and task flow, drawing on input from Product Managers, R&amp;D, Technical Support, and Services to keep documentation aligned with product behaviour and customer needs.</p>
+      </article>
+      <article>
+        <h3>Retain human ownership and quality</h3>
+        <p>Writers validate technical details and resolve gaps with subject-matter experts. I review, edit, or write content directly when needed, while keeping clear accountability for final quality.</p>
+      </article>
+    </div>
+    <div class="note"><strong>Measurement note:</strong> The workflow is intended to streamline selected documentation tasks. Time savings have not been formally quantified.</div>
+  </div>
+</section>
+
+<section class="soft" id="analytics">
+  <div class="container">
+    <div class="heading">
+      <p class="kicker">Case study 03 · Content insights</p>
+      <h2 class="title">Translating Customer and Business Priorities into Content Decisions</h2>
+      <p class="intro">I use customer feedback, support questions, product priorities, and available documentation analytics to identify information needs and guide content decisions. This helps keep documentation, release notes, and FAQs relevant to customer tasks and product changes.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <h3>Identify recurring information needs</h3>
+        <p>Review customer surveys, support questions, documentation feedback, and available search analytics to spot recurring themes and topics that attract attention.</p>
+      </article>
+      <article class="card">
+        <h3>Align content with product and business priorities</h3>
+        <p>Work with product and cross-functional stakeholders to turn release and business priorities into clear content priorities, identify gaps, and keep documentation, release notes, and FAQs aligned with customer needs.</p>
+      </article>
+    </div>
+    <div class="note"><strong>Measurement note:</strong> This work informs prioritisation through available evidence; quantified improvements have not been formally established.</div>
+  </div>
+</section>
+
+<section class="soft" id="knowledge-agent">
+  <div class="container">
+    <div class="heading">
+      <p class="kicker">Knowledge readiness · Customer self-service</p>
+      <h2 class="title">Building Customer-Relevant Knowledge for AI-Powered Support</h2>
+      <p class="intro">AI-powered customer experiences depend on useful, well-maintained source content. My contribution focuses on the documentation and knowledge practices that help make that source relevant to real customer needs.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <h3>Start with customer and Support needs</h3>
+        <p>Work with Support to identify recurring customer pain points, frequently asked questions, practical use cases, and best practices that should be represented in the knowledge base.</p>
+      </article>
+      <article class="card">
+        <h3>Keep the knowledge source useful</h3>
+        <p>Help prepare and maintain documentation that serves as a source for the customer-facing knowledge agent, with scheduled indexing refreshes supporting the availability of updated content.</p>
+      </article>
+    </div>
+    <div class="note"><strong>Scope of contribution:</strong> My role centres on customer needs, documentation quality, and knowledge readiness—not engineering the agent, retrieval system, or underlying AI platform.</div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="container">
+    <div class="heading">
+      <p class="kicker">My approach</p>
+      <h2 class="title">Leading with Strategy, Editorial Judgement, and Execution</h2>
+      <p class="intro">I own documentation outcomes from strategy through delivery—balancing customer and business priorities, team development, content quality, and continuous improvement. I bring structure to ambiguity, build alignment across teams, and influence outcomes through evidence and collaboration rather than authority alone.</p>
+    </div>
+    <div class="principles">
+      <article class="principle">
+        <h3>Translate priorities into customer-focused content</h3>
+        <p>Connect business and product priorities to the tasks customers need to complete, the questions they ask, and the issues they need to resolve.</p>
+      </article>
+      <article class="principle">
+        <h3>Influence through collaboration</h3>
+        <p>Work across R&amp;D, Technical Support, Services, and product teams to resolve ambiguity, align on customer needs, and move documentation priorities forward.</p>
+      </article>
+      <article class="principle">
+        <h3>Build capability and maintain quality</h3>
+        <p>Develop writers, set clear standards, and provide hands-on editorial support. Combine team coaching with direct reviewing, editing, and writing to maintain consistency and close content gaps.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="container">
+    <div class="heading">
+      <p class="kicker">Tools &amp; platforms</p>
+      <h2 class="title">Tools for Documentation and Knowledge Management</h2>
+      <p class="intro">I work across documentation authoring, collaboration, AI-assisted content development, and knowledge analytics. I apply these tools to support content planning, publishing, quality, discoverability, and continuous improvement.</p>
+    </div>
+    <div class="tools-grid">
+      <div class="tools-visual" role="img" aria-label="Illustration of a documentation workspace with structured content, API specifications, search, and analytics">
+        <svg viewBox="0 0 440 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="toolbg2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffffff"/>
+              <stop offset="1" stop-color="#e5edff"/>
+            </linearGradient>
+          </defs>
+          <rect x="56" y="27" width="328" height="246" rx="18" fill="url(#toolbg2)" stroke="#c5d5f0" stroke-width="2"/>
+          <rect x="77" y="46" width="286" height="34" rx="8" fill="#102344"/>
+          <circle cx="92" cy="63" r="3.5" fill="#8db8ff"/>
+          <circle cx="104" cy="63" r="3.5" fill="#8db8ff" opacity=".7"/>
+          <circle cx="116" cy="63" r="3.5" fill="#8db8ff" opacity=".45"/>
+          <rect x="138" y="59" width="92" height="7" rx="3.5" fill="#fff" opacity=".9"/>
+          <rect x="77" y="95" width="166" height="154" rx="11" fill="#fff" stroke="#d3def1"/>
+          <rect x="91" y="109" width="94" height="8" rx="4" fill="#3269bd"/>
+          <rect x="91" y="128" width="135" height="5" rx="2.5" fill="#a9bad5"/>
+          <rect x="91" y="140" width="119" height="5" rx="2.5" fill="#c0cce0"/>
+          <rect x="91" y="157" width="138" height="31" rx="6" fill="#edf3ff"/>
+          <path d="M103 169h8l-5 4 5 4M118 177h15" stroke="#3269bd" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="91" y="200" width="126" height="5" rx="2.5" fill="#c0cce0"/>
+          <rect x="91" y="212" width="105" height="5" rx="2.5" fill="#c0cce0"/>
+          <rect x="257" y="95" width="106" height="70" rx="10" fill="#edf3ff" stroke="#c5d5f0"/>
+          <path d="M275 111h15l-7 7 7 7M302 125h15" fill="none" stroke="#3269bd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="275" y="139" width="64" height="5" rx="2.5" fill="#9fb2d2"/>
+          <rect x="257" y="177" width="106" height="72" rx="10" fill="#eef8f5" stroke="#b7ded3"/>
+          <path d="M273 231v-15l15-11 13 7 18-20" fill="none" stroke="#25866e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M273 236h70" stroke="#9bcfc0" stroke-width="2"/>
+          <circle cx="345" cy="191" r="4" fill="#25866e"/>
+          <circle cx="36" cy="108" r="17" fill="#dce9ff" stroke="#aac4ef"/>
+          <path d="M29 103h14M29 108h14M29 113h9" stroke="#3269bd" stroke-width="2" stroke-linecap="round"/>
+          <path d="M45 108h11" stroke="#86a9e5" stroke-width="2" stroke-dasharray="3 3"/>
+          <circle cx="402" cy="217" r="17" fill="#fff0d9" stroke="#f0d19b"/>
+          <path d="M402 207v20M392 217h20" stroke="#bd8628" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M384 217h-10" stroke="#86a9e5" stroke-width="2" stroke-dasharray="3 3"/>
+        </svg>
+      </div>
+      <div>
+        <h3 style="color:var(--navy);margin-top:0">Documentation authoring &amp; knowledge platforms</h3>
+        <div class="tool-list">
+          <span>MadCap Flare</span>
+          <span>MindTouch</span>
+          <span>Document360</span>
+          <span>Confluence</span>
+        </div>
+        <h3 class="tool-subhead">Planning, AI &amp; collaboration</h3>
+        <div class="tool-list">
+          <span>Jira</span>
+          <span>Google Gemini</span>
+          <span>Microsoft Copilot</span>
+          <span>Atlassian AI Agent</span>
+        </div>
+        <h3 class="tool-subhead">API documentation familiarity</h3>
+        <p class="tool-note">Familiar with Swagger / OpenAPI and Postman for understanding API specifications and documentation workflows.</p>
+        <h3 class="tool-subhead">Documentation analytics</h3>
+        <div class="tool-list">
+          <span>Search analytics</span>
+          <span>Page-view analytics</span>
+          <span>Content performance reporting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="about">
+  <div class="container">
+    <div class="heading">
+      <p class="kicker">About</p>
+      <h2 class="title">Product Documentation Leadership with Customer and Business Impact</h2>
+    </div>
+    <div class="aboutgrid">
+      <div class="aboutcopy">
+        <p>I am a technical communication leader with more than two decades of experience across enterprise software documentation, product help content, structured authoring, and content operations.</p>
+        <p>As a Technical Writing Manager, I own the product documentation function and focus on its performance, maturity, and business impact. I translate business and product priorities into content priorities and work with leaders across R&amp;D, Technical Support, and Services to keep product documentation, release notes, and FAQs aligned with customer needs.</p>
+        <p>I take a player-coach approach: I build and develop the team while staying close to the craft through editorial reviews, hands-on editing, and writing when needed. My strengths include editorial judgement, information architecture, execution discipline, managing ambiguity, and influencing without authority. I also evolve AI-assisted content practices as tools and team needs change.</p>
+        <div class="skills">
+          <span>Product documentation ownership</span>
+          <span>Documentation strategy</span>
+          <span>Editorial judgement</span>
+          <span>Information architecture</span>
+          <span>Content governance</span>
+          <span>Release notes &amp; FAQs</span>
+          <span>AI-assisted content model</span>
+          <span>Customer insights</span>
+          <span>Knowledge management</span>
+          <span>Team development</span>
+          <span>Cross-functional influence</span>
+          <span>Execution discipline</span>
+        </div>
+      </div>
+      <aside class="facts">
+        <div class="fact">
+          <strong>Current role</strong>
+          <span>Manager, Technical Writing · Skyhigh Security</span>
+        </div>
+        <div class="fact">
+          <strong>Team leadership</strong>
+          <span>Leads a team of four Product Documentation Specialists</span>
+        </div>
+        <div class="fact">
+          <strong>Documentation environment</strong>
+          <span>Enterprise software, multi-product releases, cross-functional teams</span>
+        </div>
+        <div class="fact">
+          <strong>Earlier experience</strong>
+          <span>Aurigo Software, ASM Technologies (Infoblox), and other technical communication roles</span>
+        </div>
+        <div class="fact">
+          <strong>Education</strong>
+          <span>M.Sc. Physics · Mysore University</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="heading">
+      <h2 class="title">Let’s connect</h2>
+      <p class="intro">Interested in technical communication leadership, knowledge management, content strategy, or AI-enabled documentation operations? I welcome conversations about building knowledge experiences that help customers succeed.</p>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="mailto:prasad_geetha@yahoo.com">Email me</a>
+      <a class="btn secondary" href="https://www.linkedin.com/in/geethabg/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <span>© 2026 Geetha B.G.</span>
+    <span>Technical Communication · Knowledge Management · AI</span>
+  </div>
+</footer>
+</body>
+</html>
