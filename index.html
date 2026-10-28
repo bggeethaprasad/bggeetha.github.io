@@ -5,121 +5,79 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Geetha B.G. — Product documentation strategy, customer onboarding, knowledge management, AI-enabled workflows, and customer self-service experiences.">
 <title>Geetha B.G. | Documentation Strategy, Knowledge &amp; AI</title>
-
 <style>
 :root {
-  --navy: #123b78;
-  --deep: #eaf4ff;
-  --blue: #347fe8;
-  --ink: #17345b;
-  --muted: #58708e;
-  --soft: #f2f7fd;
-  --line: #dce8f5;
-  --max: 1240px;
+  --navy: #102344;
+  --deep: #09162d;
+  --blue: #4c8df6;
+  --ink: #18263c;
+  --muted: #607087;
+  --soft: #f4f7fc;
+  --line: #e2e8f1;
+  --max: 1120px;
 }
-
 * { box-sizing: border-box; }
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
-
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 body {
   margin: 0;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   line-height: 1.65;
   color: var(--ink);
-  background: #fff;
 }
-
 a { color: inherit; }
-
-.container {
-  width: min(var(--max), calc(100% - 40px));
-  margin: auto;
-}
+.container { width: min(var(--max), calc(100% - 40px)); margin: auto; }
 
 .header {
   position: sticky;
   top: 0;
   z-index: 5;
-  background: rgba(255,255,255,.96);
+  background: #ffffffed;
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid #e4edf7;
+  border-bottom: 1px solid var(--line);
 }
-
 .nav {
-  min-height: 66px;
+  min-height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
-
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   color: var(--navy);
   text-decoration: none;
-  font-weight: 800;
 }
-
-.brand::after {
-  content: "Documentation & Knowledge Management Leader";
-  max-width: 240px;
-  font-size: .84rem;
-  line-height: 1.25;
-  font-weight: 750;
-}
-
-.brand svg { display: block; color: #347fe8; }
-
-.navlinks {
-  display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
-}
-
+.brand svg { display: block; }
+.navlinks { display: flex; gap: 20px; flex-wrap: wrap; }
 .navlinks a {
   text-decoration: none;
-  color: #28486f;
-  font-size: .86rem;
+  color: #43546c;
+  font-size: .9rem;
   font-weight: 650;
 }
-
-.navlinks a:hover,
-.link:hover { color: #1f62c2; }
+.navlinks a:hover, .link:hover { color: #1f62c2; }
 
 .hero {
-  padding: 50px 0 42px;
-  color: var(--ink);
-  background: linear-gradient(100deg,#e8f3ff 0%,#f9fcff 49%,#e6f2ff 100%);
-  position: relative;
-  overflow: hidden;
+  padding: 68px 0;
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 15%, #4c8df63b, transparent 28%),
+    linear-gradient(130deg, var(--deep), var(--navy) 72%);
 }
-
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 38px;
+  grid-template-columns: 1.6fr .55fr;
+  gap: 50px;
   align-items: center;
 }
-
-.eyebrow,
-.kicker {
+.eyebrow, .kicker {
   font-size: .76rem;
   font-weight: 800;
-  letter-spacing: .1em;
+  letter-spacing: .15em;
   text-transform: uppercase;
 }
-
-.eyebrow {
-  color: #326bb3;
-  margin: 0 0 12px;
-}
-
+.eyebrow { color: #a8c9ff; margin: 0 0 18px; }
 h1 {
   font-size: clamp(2.25rem, 4.5vw, 3.65rem);
   letter-spacing: -.045em;
@@ -127,61 +85,36 @@ h1 {
   margin: 0 0 18px;
   color: #F8FAFC !important;
 }
-
-.hero h1 {
-  font-size: .92rem;
-  letter-spacing: .08em;
-  margin: 0 0 10px;
-  color: #2863aa !important;
-}
-
 .hero h2 {
-  font-size: clamp(2rem,3.4vw,3.15rem) !important;
-  line-height: 1.13 !important;
-  letter-spacing: -.035em !important;
-  color: #123b78 !important;
-  margin: 0 0 17px;
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
 }
-
 .hero-copy {
-  color: #355579;
-  max-width: 650px;
-  font-size: 1.03rem;
+  color: #d9e4f6;
+  max-width: 780px;
+  font-size: 1.05rem;
   margin-bottom: 0;
-  text-align: left;
-  text-justify: inter-word;
-  hyphens: auto;
 }
-
 .actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 22px;
+  margin-top: 28px;
 }
-
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 17px;
-  border-radius: 9px;
+  padding: 11px 18px;
+  border-radius: 999px;
   text-decoration: none;
   font-weight: 750;
   border: 1px solid transparent;
 }
-
-.primary {
-  background: #347fe8;
-  color: #fff;
-  box-shadow: 0 5px 14px #347fe826;
-}
-
-.secondary {
-  border-color: #b7cce6;
-  color: #17447e;
-  background: #ffffffc9;
-}
+.primary { background: white; color: var(--navy); }
+.secondary { border-color: #ffffff70; color: white; }
 
 .portrait {
   aspect-ratio: 4/5;
@@ -193,7 +126,6 @@ h1 {
   place-items: center;
   background: linear-gradient(145deg, #ffffff20, #ffffff08);
 }
-
 .portrait span {
   width: 112px;
   height: 112px;
@@ -205,34 +137,23 @@ h1 {
   font-weight: 850;
 }
 
-section {
-  padding-top: 42px;
-  padding-bottom: 42px;
-}
-
-.soft { background: #f5f9fe; }
-
+section { padding: 58px 0; }
+.soft { background: var(--soft); }
 .heading {
   max-width: 900px;
-  margin: 0 auto 22px;
+  margin: 0 auto 28px;
   text-align: center;
 }
-
-.kicker {
-  color: #3476c6;
-  margin: 0 0 10px;
-}
-
+.kicker { color: #3269bd; margin: 0 0 10px; }
 .title {
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.15;
-  letter-spacing: -.025em;
-  color: #123b78;
+  letter-spacing: -.04em;
+  color: var(--navy);
   margin: 0 0 14px;
 }
-
 .intro {
-  color: #3f5c7e;
+  color: var(--muted);
   font-size: 1.05rem;
   margin: 0 auto;
   text-align: left;
@@ -242,106 +163,73 @@ section {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 24px;
 }
-
 .card {
   min-width: 0;
-  background: #fff;
-  border: 1px solid #dce8f5;
-  border-radius: 13px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
   padding: 28px;
-  box-shadow: 0 4px 14px #214b7610;
-  overflow: hidden;
+  box-shadow: 0 8px 24px #10234408;
 }
-
 .num {
   font-size: .75rem;
   letter-spacing: .13em;
   font-weight: 850;
-  color: #347fe8;
+  color: #3269bd;
 }
-
 .card h3 {
   font-size: 1.08rem;
   line-height: 1.45;
-  color: #153b70;
+  color: var(--navy);
   margin: 12px 0;
   letter-spacing: -.01em;
   overflow-wrap: break-word;
   transition: color .25s ease;
 }
-
 .card:hover h3 { color: #3269bd; }
-
 .card p {
   color: var(--muted);
   margin: 0 0 16px;
   line-height: 1.7;
 }
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin: 16px 0;
-}
-
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 16px 0; }
 .tag {
   font-size: .76rem;
   font-weight: 700;
-  color: #2c5f9e;
-  background: #eef5ff;
-  border: 1px solid #dfebfa;
+  color: #2a579c;
+  background: #edf3ff;
   border-radius: 99px;
   padding: 5px 9px;
 }
-
 .link {
   display: inline-block;
-  color: #1764c4;
-  font-weight: 750;
+  color: #245db0;
+  font-weight: 800;
   text-decoration: none;
   margin-top: 5px;
 }
 
-.case {
-  padding: 0;
-  overflow: hidden;
-}
-
+.case { padding: 0; overflow: hidden; }
 .casehead {
   padding: 28px;
   background: linear-gradient(130deg, #102344, #214c88);
-  color: #fff;
+  color: white;
 }
-
 .casehead .kicker { color: #a9cbff; }
-
 .casehead h3 {
   font-size: clamp(1.5rem, 3vw, 2rem);
-  color: #fff;
+  color: white;
   margin: 8px 0;
 }
-
 .casehead p { color: #e0eaf9; margin: 0; }
-
 .casebody { padding: 28px; }
-
-.casebody h4 {
-  color: var(--navy);
-  margin: 20px 0 7px;
-}
-
+.casebody h4 { color: var(--navy); margin: 20px 0 7px; }
 .casebody h4:first-child { margin-top: 0; }
-
-.casebody p,
-.casebody li { color: #4d5e75; }
-
+.casebody p, .casebody li { color: #4d5e75; }
 .casebody p { margin-top: 0; }
-
 .casebody li { margin: 8px 0; }
-
 .note {
   margin-top: 22px;
   padding: 16px 18px;
@@ -356,14 +244,12 @@ section {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
-
 .workflow article {
-  background: #fff;
+  background: white;
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 22px;
 }
-
 .workflow h3 { color: var(--navy); margin: 0 0 8px; }
 .workflow p { margin: 0; color: var(--muted); }
 
@@ -372,69 +258,28 @@ section {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
 }
-
-.principle {
-  padding: 20px;
-  background: #edf3ff;
-  border-radius: 15px;
-}
-
-.principle h3 {
-  color: var(--navy);
-  font-size: 1rem;
-  margin: 0 0 7px;
-}
-
-.principle p {
-  color: #50627b;
-  margin: 0;
-  font-size: .94rem;
-}
+.principle { padding: 20px; background: #edf3ff; border-radius: 15px; }
+.principle h3 { color: var(--navy); font-size: 1rem; margin: 0 0 7px; }
+.principle p { color: #50627b; margin: 0; font-size: .94rem; }
 
 .aboutgrid {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
-  gap: 18px;
+  gap: 38px;
 }
-
 .aboutcopy p { color: var(--muted); }
-
 .facts { display: grid; gap: 11px; }
+.fact { border: 1px solid var(--line); border-radius: 13px; padding: 15px; }
+.fact strong { display: block; color: var(--navy); }
+.fact span { font-size: .92rem; color: var(--muted); }
 
-.fact {
-  border: 1px solid var(--line);
-  border-radius: 13px;
-  padding: 15px;
-}
-
-.fact strong {
-  display: block;
-  color: var(--navy);
-  font-size: .94rem;
-  letter-spacing: -.01em;
-}
-
-.fact span {
-  display: block;
-  font-size: .92rem;
-  color: var(--muted);
-  line-height: 1.55;
-  margin-top: 3px;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 20px;
-}
-
+.skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 .skills span {
   border: 1px solid var(--line);
   border-radius: 99px;
   padding: 6px 11px;
   color: #43546c;
-  background: #fff;
+  background: white;
   font-size: .84rem;
 }
 
@@ -444,7 +289,6 @@ section {
   gap: 36px;
   align-items: center;
 }
-
 .tools-visual {
   min-height: 240px;
   border: 1px solid var(--line);
@@ -454,65 +298,25 @@ section {
   place-items: center;
   padding: 16px;
 }
-
-.tools-visual svg {
-  display: block;
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-}
-
-.tool-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 18px;
-}
-
+.tools-visual svg { display: block; width: 100%; max-width: 350px; height: auto; }
+.tool-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 .tool-list span {
   padding: 7px 11px;
   border-radius: 10px;
-  background: #fff;
+  background: white;
   border: 1px solid var(--line);
   font-size: .9rem;
   font-weight: 650;
   color: #354966;
 }
+.tool-subhead { color: var(--navy); font-size: 1rem; line-height: 1.35; margin: 22px 0 8px; }
+.tool-note { color: var(--muted); margin: 0; font-size: .94rem; line-height: 1.65; }
 
-.tool-subhead {
-  color: var(--navy);
-  font-size: 1rem;
-  line-height: 1.35;
-  margin: 22px 0 8px;
-}
-
-.tool-note {
-  color: var(--muted);
-  margin: 0;
-  font-size: .94rem;
-  line-height: 1.65;
-}
-
-.contact {
-  background: linear-gradient(110deg,#eff7ff,#f9fcff);
-  border: 1px solid #e0ebf8;
-  border-radius: 16px;
-  margin-top: 24px;
-  color: #fff;
-}
-
-.contact .title { color: #fff; }
+.contact { background: var(--deep); color: white; }
+.contact .title { color: white; }
 .contact .intro { color: #d3def0; }
 .contact .actions { margin-top: 25px; }
-
-.footer {
-  background: #071126;
-  color: #647b98;
-  border-top: 1px solid #e3edf8;
-  padding: 20px 0;
-  font-size: .85rem;
-}
-
+.footer { background: #071126; color: #aebbd0; padding: 20px 0; font-size: .85rem; }
 .footer .container {
   display: flex;
   flex-wrap: wrap;
@@ -524,252 +328,76 @@ section {
 #work .title { max-width: 850px; margin: 0 auto 16px; line-height: 1.2; }
 #work .intro { max-width: 800px; }
 
-.hero-copy,
-.casebody p,
-.casebody li,
-.aboutcopy p,
-.tool-note {
+.hero-copy, .casebody p, .casebody li, .aboutcopy p, .tool-note {
   text-align: left;
   text-justify: inter-word;
   hyphens: auto;
 }
 
 .value-section { padding: 58px 0; background: #fff; }
-
-.value-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.value-card {
-  background: #f1f7ff;
-  border: 1px solid #e1edf9;
-  border-radius: 14px;
-  box-shadow: none;
-  padding: 19px;
-}
-
-.value-card h3 {
-  color: #17447e;
-  margin: 0 0 8px;
-  font-size: 1.05rem;
-}
-
+.value-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.value-card { background: #f7f9fd; border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+.value-card h3 { color: var(--navy); margin: 0 0 8px; font-size: 1.05rem; }
 .value-card p { color: var(--muted); margin: 0; }
 .future-inner { max-width: 900px; }
 .future-copy { margin-top: 16px !important; }
+@media (max-width: 780px) { .value-grid { grid-template-columns: 1fr; } }
 
-.card-media {
-  margin: -1px -1px 14px;
-  overflow: hidden;
-  background: #eaf0fa;
+@media (max-width: 780px) {
+  .nav { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+  .navlinks { gap: 10px 15px; }
+  .hero { padding: 62px 0; }
+  .hero-grid, .aboutgrid { grid-template-columns: 1fr; gap: 28px; }
+  .portrait { width: 160px; aspect-ratio: 1; margin: 0; }
+  .portrait span { width: 80px; height: 80px; font-size: 1.5rem; }
+  h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+  section { padding: 44px 0; }
+  .heading { margin-bottom: 24px; }
+  .grid, .workflow, .principles, .tools-grid { grid-template-columns: 1fr; }
+  #work .heading { margin-bottom: 28px; }
+  #work .card { padding: 22px; }
+  #work .grid { row-gap: 18px; }
+  #tools .tools-grid { gap: 22px; }
+  #tools .tools-visual { min-height: 200px; }
 }
 
-.card-media img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1.65 / 1;
-  object-fit: cover;
-  transition: transform .35s ease;
-}
-
+/* Visual storytelling */
+.card-media { margin: -28px -28px 22px; overflow: hidden; background: #eaf0fa; }
+.card-media img { display: block; width: 100%; aspect-ratio: 16 / 8.5; object-fit: cover; transition: transform .35s ease; }
 .card:hover .card-media img { transform: scale(1.025); }
 
+/* Reduced case-study image size */
 .case-visual {
-  margin: 0;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
   overflow: hidden;
   background: #eaf0fa;
+  border-radius: 12px;
 }
-
 .case-visual img {
   display: block;
   width: 100%;
-  max-height: 330px;
-  aspect-ratio: 16 / 6.5;
+  max-height: 180px;
+  aspect-ratio: 16 / 5;
   object-fit: cover;
 }
-
-.about-visual {
-  margin: 0 0 22px;
-  overflow: hidden;
-  border-radius: 18px;
-  border: 1px solid var(--line);
-  background: #eaf0fa;
+.about-visual { margin: 0 0 22px; overflow: hidden; border-radius: 18px; border: 1px solid var(--line); background: #eaf0fa; }
+.about-visual img { display: block; width: 100%; max-height: 280px; aspect-ratio: 16 / 7; object-fit: cover; }
+.fact strong { font-size: .94rem; letter-spacing: -.01em; }
+.fact span { display: block; line-height: 1.55; margin-top: 3px; }
+.hero-visual { width: min(100%, 300px); margin-left: auto; border-radius: 28px; overflow: hidden; border: 1px solid #ffffff40; box-shadow: 0 18px 50px #00000020; }
+.hero-visual img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+@media (max-width: 780px) {
+  .card-media { margin: -22px -22px 18px; }
+  .hero-visual { width: 160px; margin: 0; }
+  .hero-visual img { aspect-ratio: 1; }
+  .case-visual { max-width: 100%; }
+  .case-visual img { max-height: 145px; aspect-ratio: 16 / 6; }
 }
 
-.about-visual img {
-  display: block;
-  width: 100%;
-  max-height: 280px;
-  aspect-ratio: 16 / 7;
-  object-fit: cover;
-}
-
-.hero-visual-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  max-width: 460px;
-  margin-left: auto;
-  min-width: 0;
-}
-
-.hero-visual {
-  width: 100%;
-  max-width: 460px;
-  margin: 0;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid #d7e5f5;
-  box-shadow: 0 8px 22px #244c7712;
-}
-
-.hero-visual img {
-  display: block;
-  width: 100%;
-  max-height: 280px;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
-/* Compact, editable professional-photo placeholder */
-.hero-photo-note {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 13px;
-  border: 1.5px dashed #8eafd9;
-  border-radius: 10px;
-  background: #f4f9ff;
-  color: #234b7b;
-}
-
-.hero-photo-note .placeholder-icon {
-  flex: 0 0 auto;
-  width: 32px;
-  height: 32px;
-  font-size: 1.2rem;
-}
-
-.hero-photo-note strong {
-  display: block;
-  font-size: .88rem;
-}
-
-.hero-photo-note small {
-  display: block;
-  margin-top: 2px;
-  color: #5b7392;
-  font-size: .74rem;
-}
-
-.hero-photo-note code {
-  background: #ffffffb8;
-  border-radius: 4px;
-  padding: 2px 4px;
-}
-
-.profile-photo-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 260px;
-  background: linear-gradient(145deg, #f8fbff, #dcecff);
-  border: 2px dashed #8eafd9;
-  color: #234b7b;
-  text-align: center;
-  box-shadow: none;
-}
-
-.photo-placeholder-content,
-.video-placeholder-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 24px;
-}
-
-.photo-placeholder-content strong,
-.video-placeholder-content strong { font-size: 1.05rem; }
-
-.photo-placeholder-content span:not(.placeholder-icon),
-.video-placeholder-content span:not(.play-icon) {
-  font-size: .88rem;
-  color: #5b7392;
-}
-
-.photo-placeholder-content code,
-.video-placeholder-content code {
-  font-size: .78rem;
-  color: #365f94;
-  background: #ffffffb8;
-  border-radius: 6px;
-  padding: 5px 8px;
-}
-
-.placeholder-icon {
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
-  border: 1px solid #9db8da;
-  border-radius: 50%;
-  font-size: 2rem;
-  line-height: 1;
-  background: #ffffff9c;
-}
-
-.profile-video-section {
-  background: #fff;
-  border-bottom: 1px solid var(--line);
-}
-
-.video-layout {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.video-copy .title { font-size: clamp(1.8rem, 3vw, 2.5rem); }
-.video-edit-note { display: none; }
-
-.video-placeholder {
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border: 2px dashed #8eafd9;
-  border-radius: 18px;
-  background: linear-gradient(135deg, #eef6ff, #dbeaff);
-  color: #234b7b;
-  text-align: center;
-}
-
-.play-icon {
-  display: grid;
-  place-items: center;
-  width: 68px;
-  height: 68px;
-  padding-left: 5px;
-  border-radius: 50%;
-  background: #fff;
-  color: #347fe8;
-  box-shadow: 0 6px 22px #244c771c;
-  font-size: 1.5rem;
-}
-
-.video-placeholder video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 
 .impact-panel {
@@ -777,72 +405,110 @@ section {
   padding: 22px;
   border: 1px solid #d7e4f7;
   border-radius: 16px;
-  background: linear-gradient(135deg, #f5f8ff, #fff);
+  background: linear-gradient(135deg, #f5f8ff, #ffffff);
+}
+.impact-panel h4 { color: var(--navy); margin: 0 0 14px; font-size: 1.05rem; }
+.impact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.impact-item { padding: 14px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.impact-item strong { display: block; color: var(--navy); margin-bottom: 5px; }
+.impact-item p { color: var(--muted); margin: 0; font-size: .94rem; }
+.impact-caveat { color: var(--muted); font-size: .86rem; margin: 14px 0 0; }
+@media (max-width: 780px) { .impact-grid { grid-template-columns: 1fr; } .impact-panel { margin: 18px 18px 22px; padding: 16px; } }
+
+/* Visual refresh: clean, light, image-led, editorial. */
+body { background: #fff; color: #15345f; }
+:root { --navy:#123b78; --deep:#eaf4ff; --blue:#347fe8; --ink:#17345b; --muted:#58708e; --soft:#f2f7fd; --line:#dce8f5; --max:1240px; }
+.header { background: rgba(255,255,255,.96); border-bottom-color:#e4edf7; }
+.brand { gap:12px; font-weight:800; }
+.brand::after { content:"Documentation & Knowledge Management Leader"; max-width:240px; font-size:.84rem; line-height:1.25; font-weight:750; }
+.brand svg { color:#347fe8; }
+.nav { min-height:66px; }
+.navlinks { gap:22px; }
+.navlinks a { font-size:.86rem; color:#28486f; }
+.hero { padding:50px 0 42px; color:var(--ink); background:linear-gradient(100deg,#e8f3ff 0%,#f9fcff 49%,#e6f2ff 100%); position:relative; overflow:hidden; }
+.hero-grid { grid-template-columns:1.15fr .85fr; gap:38px; }
+.eyebrow { color:#326bb3; letter-spacing:.09em; margin-bottom:12px; }
+.hero h1 { font-size:.92rem; letter-spacing:.08em; margin:0 0 10px; color:#2863aa !important; }
+.hero h2 { font-size:clamp(2rem,3.4vw,3.15rem) !important; line-height:1.13 !important; letter-spacing:-.035em !important; color:#123b78 !important; margin-bottom:17px; }
+.hero-copy { color:#355579; font-size:1.03rem; max-width:650px; }
+.actions { margin-top:22px; }
+.btn { border-radius:9px; padding:10px 17px; }
+.primary { background:#347fe8; color:#fff; box-shadow:0 5px 14px #347fe826; }
+.secondary { border-color:#b7cce6; color:#17447e; background:#ffffffc9; }
+.hero-visual-stack { width:100%; max-width:460px; margin-left:auto; gap:10px; }
+.hero-visual { width:100%; max-width:460px; margin:0; border-radius:14px; border:1px solid #d7e5f5; box-shadow:0 8px 22px #244c7712; }
+.hero-visual img { display:block; width:100%; max-height:280px; aspect-ratio:16 / 9; object-fit:cover; }
+section { padding-top:42px; padding-bottom:42px; }
+.value-section { background:#fff; }
+.heading { margin-bottom:22px; }
+.kicker { color:#3476c6; letter-spacing:.1em; }
+.title { color:#123b78; letter-spacing:-.025em; }
+.intro { color:#3f5c7e; }
+.value-grid { gap:14px; }
+.value-card { background:#f1f7ff; border:1px solid #e1edf9; border-radius:14px; box-shadow:none; padding:19px; }
+.value-card h3 { color:#17447e; }
+.grid { gap:16px; }
+.card { border:1px solid #dce8f5; border-radius:13px; box-shadow:0 4px 14px #214b7610; overflow:hidden; background:#fff; }
+.card-media { margin:-1px -1px 14px; }
+.card-media img { aspect-ratio: 1.65 / 1; object-fit:cover; }
+.num { color:#347fe8; }
+.card h3 { color:#153b70; }
+.tag { background:#eef5ff; color:#2c5f9e; border:1px solid #dfebfa; }
+.link { color:#1764c4; font-weight:750; }
+.soft { background:#f5f9fe; }
+.aboutgrid, .tool-grid { gap:18px; }
+.aboutcopy, .tool-card { border-radius:14px; }
+.tool-card { background:#edf5ff; border:1px solid #dfebf9; }
+.contact { background:linear-gradient(110deg,#eff7ff,#f9fcff); border:1px solid #e0ebf8; border-radius:16px; margin-top:24px; }
+.footer { color:#647b98; border-top:1px solid #e3edf8; }
+@media (max-width:780px) {
+  .brand::after { max-width:180px; font-size:.74rem; }
+  .nav { align-items:flex-start; padding:12px 0; flex-direction:column; }
+  .navlinks { gap:12px 16px; }
+  .hero { padding:36px 0; }
+  .hero-grid { grid-template-columns:1fr; gap:24px; }
+  .hero-visual-stack { max-width:100%; margin:0; }
+  .hero-visual { max-width:100%; }
+  .hero-visual img { max-height:240px; aspect-ratio:16 / 9; }
+  section { padding-top:32px; padding-bottom:32px; }
 }
 
-.impact-panel h4 {
-  color: var(--navy);
-  margin: 0 0 14px;
-  font-size: 1.05rem;
-}
+/* Editable professional photo placeholder above the hero image. */
+.hero-visual-stack { display:flex; flex-direction:column; gap:12px; min-width:0; }
+.hero-photo-note { display:flex; align-items:center; gap:12px; padding:10px 13px; border:1.5px dashed #8eafd9; border-radius:10px; background:#f4f9ff; color:#234b7b; }
+.hero-photo-note .placeholder-icon { flex:0 0 auto; width:32px; height:32px; font-size:1.2rem; }
+.hero-photo-note strong { display:block; font-size:.88rem; }
+.hero-photo-note small { display:block; margin-top:2px; color:#5b7392; font-size:.74rem; }
+.hero-photo-note code { background:#ffffffb8; border-radius:4px; padding:2px 4px; }
+@media (max-width:780px) { .hero-photo-note { padding:11px 13px; } }
 
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+/* Placeholder for a future profile video. */
+.profile-photo-placeholder {
+  display: flex; align-items: center; justify-content: center; min-height: 260px;
+  background: linear-gradient(145deg, #f8fbff, #dcecff); border: 2px dashed #8eafd9;
+  color: #234b7b; text-align: center; box-shadow: none;
 }
-
-.impact-item {
-  padding: 14px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 12px;
+.photo-placeholder-content, .video-placeholder-content {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  padding: 24px;
 }
-
-.impact-item strong {
-  display: block;
-  color: var(--navy);
-  margin-bottom: 5px;
-}
-
-.impact-item p {
-  color: var(--muted);
-  margin: 0;
-  font-size: .94rem;
-}
-
-.impact-caveat {
-  color: var(--muted);
-  font-size: .86rem;
-  margin: 14px 0 0;
-}
-
+.photo-placeholder-content strong, .video-placeholder-content strong { font-size: 1.05rem; }
+.photo-placeholder-content span:not(.placeholder-icon), .video-placeholder-content span:not(.play-icon) { font-size: .88rem; color: #5b7392; }
+.photo-placeholder-content code, .video-placeholder-content code { font-size: .78rem; color: #365f94; background: #ffffffb8; border-radius: 6px; padding: 5px 8px; }
+.placeholder-icon { display: grid; place-items: center; width: 58px; height: 58px; border: 1px solid #9db8da; border-radius: 50%; font-size: 2rem; line-height: 1; background: #ffffff9c; }
+.profile-video-section { background: #fff; border-bottom: 1px solid var(--line); }
+.video-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px; align-items: center; }
+.video-copy .title { font-size: clamp(1.8rem, 3vw, 2.5rem); }
+.video-edit-note { display:none; }
+.video-placeholder { min-height: 300px; display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 9; overflow: hidden; border: 2px dashed #8eafd9; border-radius: 18px; background: linear-gradient(135deg, #eef6ff, #dbeaff); color: #234b7b; text-align: center; }
+.play-icon { display: grid; place-items: center; width: 68px; height: 68px; padding-left: 5px; border-radius: 50%; background: #fff; color: #347fe8; box-shadow: 0 6px 22px #244c771c; font-size: 1.5rem; }
+.video-placeholder video { display: block; width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 780px) {
-  .brand::after { max-width: 180px; font-size: .74rem; }
-  .nav { align-items: flex-start; padding: 12px 0; flex-direction: column; }
-  .navlinks { gap: 12px 16px; }
-  .hero { padding: 36px 0; }
-  .hero-grid { grid-template-columns: 1fr; gap: 24px; }
-  .hero-visual-stack { max-width: 100%; margin: 0; }
-  .hero-visual { max-width: 100%; }
-  .hero-visual img { max-height: 240px; aspect-ratio: 16 / 9; }
   .profile-photo-placeholder { min-height: 230px; }
   .video-layout { grid-template-columns: 1fr; gap: 20px; }
   .video-placeholder { min-height: 210px; }
-  section { padding-top: 32px; padding-bottom: 32px; }
-  .grid, .workflow, .principles, .tools-grid { grid-template-columns: 1fr; }
-  .value-grid { grid-template-columns: 1fr; }
-  .impact-grid { grid-template-columns: 1fr; }
-  .impact-panel { margin: 18px 18px 22px; padding: 16px; }
-  .card-media { margin: -22px -22px 18px; }
-  .case-visual img { aspect-ratio: 16 / 9; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
 }
 </style>
-
 <script>
 (function () {
   const palettes = [
@@ -851,49 +517,24 @@ section {
     ['#f0edfb','#d5c9f3','#59458b','AI WORKFLOW'],
     ['#f8f0e6','#ead1b0','#8b5c2b','TEAM COLLABORATION']
   ];
-
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('img').forEach(function (img, index) {
       img.addEventListener('error', function () {
         if (img.dataset.fallbackApplied) return;
-
         img.dataset.fallbackApplied = 'true';
         const p = palettes[index % palettes.length];
-
-        const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
-          <defs>
-            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-              <stop stop-color="${p[0]}"/>
-              <stop offset="1" stop-color="${p[1]}"/>
-            </linearGradient>
-          </defs>
-          <rect width="1200" height="675" fill="url(#g)"/>
-          <circle cx="980" cy="130" r="180" fill="#fff" opacity=".36"/>
-          <circle cx="180" cy="600" r="220" fill="#fff" opacity=".25"/>
-          <rect x="245" y="150" width="710" height="350" rx="28" fill="#fff" opacity=".75" stroke="${p[2]}" stroke-opacity=".16" stroke-width="4"/>
-          <rect x="290" y="198" width="620" height="42" rx="10" fill="${p[2]}" opacity=".14"/>
-          <rect x="290" y="272" width="390" height="18" rx="9" fill="${p[2]}" opacity=".30"/>
-          <rect x="290" y="310" width="520" height="14" rx="7" fill="${p[2]}" opacity=".17"/>
-          <rect x="290" y="342" width="460" height="14" rx="7" fill="${p[2]}" opacity=".17"/>
-          <rect x="290" y="390" width="170" height="64" rx="12" fill="${p[2]}" opacity=".85"/>
-          <text x="600" y="570" font-family="Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="5" text-anchor="middle" fill="${p[2]}">${p[3]}</text>
-        </svg>`;
-
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="${p[0]}"/><stop offset="1" stop-color="${p[1]}"/></linearGradient></defs><rect width="1200" height="675" fill="url(#g)"/><circle cx="980" cy="130" r="180" fill="#fff" opacity=".36"/><circle cx="180" cy="600" r="220" fill="#fff" opacity=".25"/><rect x="245" y="150" width="710" height="350" rx="28" fill="#fff" opacity=".75" stroke="${p[2]}" stroke-opacity=".16" stroke-width="4"/><rect x="290" y="198" width="620" height="42" rx="10" fill="${p[2]}" opacity=".14"/><rect x="290" y="272" width="390" height="18" rx="9" fill="${p[2]}" opacity=".30"/><rect x="290" y="310" width="520" height="14" rx="7" fill="${p[2]}" opacity=".17"/><rect x="290" y="342" width="460" height="14" rx="7" fill="${p[2]}" opacity=".17"/><rect x="290" y="390" width="170" height="64" rx="12" fill="${p[2]}" opacity=".85"/><text x="600" y="570" font-family="Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="5" text-anchor="middle" fill="${p[2]}">${p[3]}</text></svg>`;
         img.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
         img.alt = img.alt || p[3].toLowerCase();
       });
-
-      if (img.complete && img.naturalWidth === 0) {
-        img.dispatchEvent(new Event('error'));
-      }
+      if (img.complete && img.naturalWidth === 0) img.dispatchEvent(new Event('error'));
     });
   });
 })();
 </script>
 </head>
 <body>
-
-<header class="header">
+  <header class="header">
   <div class="container nav">
     <a class="brand" href="#home" aria-label="Home" title="Home">
       <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -902,49 +543,59 @@ section {
         <path d="M12 7c2.5-2.5 6.5-3 10-2v14c-4-1-7.5-.5-10 2"/>
       </svg>
     </a>
-
     <nav class="navlinks" aria-label="Main navigation">
       <a href="#work">Case Studies</a>
       <a href="#value">Business Value</a>
       <a href="#ai">AI &amp; Workflows</a>
       <a href="#approach">Approach</a>
-      <a href="#tools">Tools</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Let’s connect</a>
     </nav>
   </div>
 </header>
 
-<main id="home">
-
-<section class="hero">
+<main>
+<section class="hero" id="home">
   <div class="container hero-grid">
     <div>
-      <p class="eyebrow">Documentation Strategy · Knowledge Management · AI</p>
+      <p class="eyebrow">Documentation Strategy · Knowledge Management · AI-Enabled Content Operations</p>
       <h1>GEETHA B.G.</h1>
-      <h2>Turning Product Knowledge into Better Customer Experiences</h2>
-      <p class="hero-copy">
-        Documentation and Knowledge Management Leader with 20+ years of experience shaping product documentation, customer self-service, and knowledge experiences. I connect content strategy with customer needs and business priorities, while introducing AI-assisted workflows that help teams work more efficiently without compromising technical accuracy or editorial quality.
-      </p>
+      <h2>Transforming product knowledge into customer success through documentation strategy, knowledge management, and AI-enabled content operations.</h2>
+      <p class="hero-copy">I connect customer needs, product priorities, and knowledge experiences to improve product adoption, strengthen self-service, and build scalable content ecosystems that support long-term customer success.</p>
       <div class="actions">
-        <a class="btn primary" href="#work">Explore Case Studies</a>
-        <a class="btn secondary" href="#contact">Connect with Me</a>
+        <a class="btn primary" href="#work">Explore my work</a>
+        <a class="btn secondary" href="#approach">My approach</a>
       </div>
     </div>
-
     <div class="hero-visual-stack">
-      <div class="hero-photo-note">
-        <span class="placeholder-icon" aria-hidden="true">👤</span>
-        <div>
-          <strong>Professional portrait</strong>
-          <small>Replace this placeholder with your photo.</small>
-        </div>
+      <div class="hero-photo-note" aria-label="Placeholder for a future professional photo">
+        <span class="placeholder-icon" aria-hidden="true">＋</span>
+        <span><strong>Add your professional photo here</strong><small>Replace this note with your portrait when ready · <code>profile-photo.jpg</code></small></span>
       </div>
-      <figure class="hero-visual">
-        <img src="https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
-             alt="Professional collaborative workspace representing documentation and knowledge strategy"
-             loading="eager">
-      </figure>
+      <div class="hero-visual">
+        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Laptop and workspace representing digital knowledge and documentation operations" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="profile-video-section" id="profile-video">
+  <div class="container video-layout">
+    <div class="video-copy">
+      <p class="kicker">Video introduction</p>
+      <h2 class="title">Get to Know Me</h2>
+      <p class="intro">A short introduction to my work in documentation strategy, knowledge management, team leadership, and AI-enabled content operations.</p>
+    </div>
+    <div class="video-placeholder" aria-label="Placeholder for a future profile introduction video">
+      <!-- Replace profile-introduction.mp4 with your video file, then uncomment the video element below. -->
+      <!-- <video controls preload="metadata" poster="profile-video-poster.jpg"><source src="profile-introduction.mp4" type="video/mp4">Your browser does not support HTML video.</video> -->
+      <div class="video-placeholder-content">
+        <span class="play-icon" aria-hidden="true">▶</span>
+        <strong>Your profile video will appear here</strong>
+        <span>Suggested length: 60–90 seconds</span>
+        <code>profile-introduction.mp4</code>
+      </div>
     </div>
   </div>
 </section>
@@ -953,71 +604,45 @@ section {
   <div class="container">
     <div class="heading">
       <p class="kicker">Business value</p>
-      <h2 class="title">Documentation That Supports Customer and Business Outcomes</h2>
-      <p class="intro">
-        I approach documentation as a product experience—not simply a publishing deliverable. The goal is to help customers complete tasks, adopt product capabilities, and find reliable answers while enabling internal teams to scale knowledge with consistency.
-      </p>
+      <h2 class="title">Creating Value Through Knowledge, Documentation, and AI</h2>
+      <p class="intro">My work extends beyond content creation to improving discoverability, self-service, operational efficiency, content quality, and organizational readiness for AI-enabled knowledge experiences.</p>
     </div>
-
     <div class="value-grid">
-      <article class="value-card">
-        <h3>Customer onboarding and product adoption</h3>
-        <p>Organize content around user goals and product workflows so customers can understand capabilities and take the next step with confidence.</p>
-      </article>
-
-      <article class="value-card">
-        <h3>Findability and self-service</h3>
-        <p>Improve information architecture, navigation, and search so users can reach relevant guidance with less effort.</p>
-      </article>
-
-      <article class="value-card">
-        <h3>Content quality and governance</h3>
-        <p>Establish standards, editorial review, and maintenance practices that keep product knowledge accurate, consistent, and useful.</p>
-      </article>
-
-      <article class="value-card">
-        <h3>AI-enabled content operations</h3>
-        <p>Apply AI to product analysis, drafting, and review while retaining human validation, accountability, and editorial judgment.</p>
-      </article>
+      <article class="value-card"><h3>Scalable knowledge platform</h3><p>Led the transition from MindTouch to Document360 to establish a scalable knowledge platform with stronger search, analytics, and long-term knowledge management capabilities.</p></article>
+      <article class="value-card"><h3>AI-enabled content operations</h3><p>Designed structured AI-assisted documentation workflows that improve drafting efficiency while preserving editorial standards, governance, and human accountability.</p></article>
+      <article class="value-card"><h3>AI-ready self-service knowledge</h3><p>Partnered with Support and Product teams to prepare customer-focused knowledge assets for AI-enabled self-service experiences.</p></article>
+      <article class="value-card"><h3>Strategic function leadership</h3><p>Lead documentation strategy, team development, quality practices, and cross-functional alignment to ensure knowledge investments support business goals and customer success.</p></article>
     </div>
   </div>
 </section>
 
-<section class="soft" id="work">
+<section id="work">
   <div class="container">
     <div class="heading">
-      <p class="kicker">Selected work</p>
-      <h2 class="title">Case Studies in Documentation, Knowledge, and AI</h2>
-      <p class="intro">
-        Examples of how I connect customer feedback, content strategy, platform decisions, and workflow improvements to strengthen the documentation experience.
-      </p>
+      <p class="kicker">Case Studies</p>
+      <h2 class="title">From Documentation Strategy to Customer Impact</h2>
+      <p class="intro">My work spans documentation transformation, AI-assisted authoring, content quality, conversational AI knowledge experiences, and team leadership. Through these case studies, I demonstrate how I connect customer needs with product priorities to drive practical improvements in how knowledge is created, maintained, and delivered.</p>
     </div>
 
     <div class="grid">
       <article class="card">
-        <div class="card-media">
-          <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
-               alt="Digital workspace representing a documentation platform transformation" loading="lazy">
-        </div>
+        <div class="card-media"><img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="A digital analytics workspace representing documentation platform evaluation and search improvement" loading="lazy"></div>
         <span class="num">CASE STUDY 01</span>
-        <h3>Transforming the Documentation Platform for Better Self-Service</h3>
-        <p>Led the evaluation and transition from MindTouch to Document360, using customer feedback and internal requirements to improve search, content organization, and knowledge discovery.</p>
+        <h3>Building a Scalable Knowledge Platform for Customer Self-Service</h3>
+        <p>Led the evaluation and transition from MindTouch to Document360 to improve content discoverability, establish a scalable knowledge platform, and prepare the documentation ecosystem for AI-powered search and future knowledge experiences.</p>
         <div class="tags">
-          <span class="tag">Platform strategy</span>
-          <span class="tag">Search and navigation</span>
           <span class="tag">Customer experience</span>
+          <span class="tag">Platform migration</span>
+          <span class="tag">Knowledge management</span>
         </div>
-        <a class="link" href="#search-case">Explore case study →</a>
+        <a class="link" href="#search-case">Explore approach →</a>
       </article>
 
       <article class="card">
-        <div class="card-media">
-          <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
-               alt="Abstract technology illustration representing an AI-assisted content workflow" loading="lazy">
-        </div>
+        <div class="card-media"><img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Abstract artificial intelligence network representing a structured AI-assisted content workflow" loading="lazy"></div>
         <span class="num">CASE STUDY 02</span>
         <h3>Operationalizing AI in Documentation Workflows</h3>
-        <p>Operationalized an AI-assisted documentation workflow that supports product analysis, drafting, editorial review, and quality governance while maintaining human accountability for technical accuracy and final content quality.</p>
+        <p>Designed and operationalized an AI-assisted documentation workflow that supports product analysis, drafting, editorial review, and quality governance while maintaining human accountability for technical accuracy and final content quality.</p>
         <div class="tags">
           <span class="tag">AI-assisted authoring</span>
           <span class="tag">Workflow design</span>
@@ -1027,10 +652,7 @@ section {
       </article>
 
       <article class="card">
-        <div class="card-media">
-          <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
-               alt="Analytics dashboard representing content prioritization and customer insight" loading="lazy">
-        </div>
+        <div class="card-media"><img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Analytics dashboard representing content prioritization and customer insight" loading="lazy"></div>
         <span class="num">CASE STUDY 03</span>
         <h3>Using Customer Insights to Drive Documentation Improvement</h3>
         <p>Led a content modernization initiative that prioritized high-value documentation using usage analytics and customer behaviour insights, improving content currency and strengthening the customer documentation experience.</p>
@@ -1043,10 +665,7 @@ section {
       </article>
 
       <article class="card">
-        <div class="card-media">
-          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
-               alt="A team collaborating on customer knowledge and conversational AI readiness" loading="lazy">
-        </div>
+        <div class="card-media"><img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="A team collaborating on customer knowledge and conversational AI readiness" loading="lazy"></div>
         <span class="num">CASE STUDY 04</span>
         <h3>Building AI-Ready Knowledge Experiences</h3>
         <p>Partnered with Support and Product teams to transform customer questions, troubleshooting guidance, and best practices into structured knowledge assets that support AI-powered self-service experiences.</p>
@@ -1059,10 +678,7 @@ section {
       </article>
 
       <article class="card">
-        <div class="card-media">
-          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
-               alt="A team collaborating around a table, representing cross-functional leadership" loading="lazy">
-        </div>
+        <div class="card-media"><img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="A team collaborating around a table, representing cross-functional leadership" loading="lazy"></div>
         <span class="num">CASE STUDY 05</span>
         <h3>Leading Documentation Strategy, Operations, and Team Development</h3>
         <p>Identified the opportunity to apply AI across documentation workflows, structured an adoption approach, trained the team, and embedded quality expectations into day-to-day practices while keeping documentation customer-focused.</p>
@@ -1076,6 +692,7 @@ section {
     </div>
   </div>
 </section>
+
 <section class="soft" id="search-case">
   <div class="container">
     <div class="heading">
@@ -1085,17 +702,12 @@ section {
     </div>
 
     <article class="card case">
-      <figure class="case-visual">
-        <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
-             alt="Analytics and digital workspace representing documentation platform transformation" loading="lazy">
-      </figure>
-
+      <figure class="case-visual"><img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Analytics and digital workspace representing documentation platform transformation" loading="lazy"></figure>
       <div class="casehead">
         <p class="kicker">Customer experience · Knowledge management · AI</p>
         <h3>Making technical information easier to find</h3>
         <p>My role: documentation initiative owner and migration lead, aligning platform decisions with customer needs and business priorities.</p>
       </div>
-
       <div class="casebody">
         <h4>The challenge</h4>
         <p>Customer feedback and internal stakeholder comments highlighted friction in the technical documentation portal, particularly around finding relevant information and navigating the content. The goal was to make search more effective and organize knowledge so users could reach the right sections with less effort.</p>
@@ -1117,29 +729,14 @@ section {
         <div class="impact-panel">
           <h4>How this supports customer and business outcomes</h4>
           <div class="impact-grid">
-            <div class="impact-item">
-              <strong>Customer success</strong>
-              <p>A more capable documentation platform gives customers a clearer route to relevant product guidance when they need to complete a task or resolve a question.</p>
-            </div>
-            <div class="impact-item">
-              <strong>Self-service</strong>
-              <p>Improved search and clearer content organization make it easier for users to discover relevant guidance and navigate directly to the sections they need.</p>
-            </div>
-            <div class="impact-item">
-              <strong>Operational efficiency</strong>
-              <p>Search and usage analytics create a practical basis for prioritizing content fixes instead of relying only on ad hoc requests.</p>
-            </div>
-            <div class="impact-item">
-              <strong>AI readiness</strong>
-              <p>The platform transition establishes a stronger foundation for structured knowledge discovery and future AI-enabled experiences; it does not by itself prove AI performance gains.</p>
-            </div>
+            <div class="impact-item"><strong>Customer success</strong><p>A more capable documentation platform gives customers a clearer route to relevant product guidance when they need to complete a task or resolve a question.</p></div>
+            <div class="impact-item"><strong>Self-service</strong><p>Improved search and clearer content organization make it easier for users to discover relevant guidance and navigate directly to the sections they need.</p></div>
+            <div class="impact-item"><strong>Operational efficiency</strong><p>Search and usage analytics create a practical basis for prioritizing content fixes instead of relying only on ad hoc requests.</p></div>
+            <div class="impact-item"><strong>AI readiness</strong><p>The platform transition establishes a stronger foundation for structured knowledge discovery and future AI-enabled experiences; it does not by itself prove AI performance gains.</p></div>
           </div>
           <p class="impact-caveat">Qualitative improvements in search and navigation were observed, alongside internal stakeholder feedback. Quantified effects on search success, support volume, or customer outcomes have not yet been established.</p>
         </div>
-
-        <div class="note">
-          <strong>Evidence status:</strong> The reported improvements are qualitative: better search, stronger information organization, and easier navigation to relevant sections. Next-step measures could include search-success rates, unsuccessful searches, user feedback, and documentation-related support trends.
-        </div>
+        <div class="note"><strong>Evidence status:</strong> The reported improvements are qualitative: better search, stronger information organization, and easier navigation to relevant sections. Next-step measures could include search-success rates, unsuccessful searches, user feedback, and documentation-related support trends.</div>
       </div>
     </article>
   </div>
@@ -1153,11 +750,7 @@ section {
       <p class="intro">I transformed a predominantly manual documentation process into a structured, AI-assisted workflow. As the agent matured, it reduced first-draft effort, streamlined editorial review, and helped writers analyse Jira stories and product changes more efficiently. This enabled faster responses to documentation requests and more time for high-value editorial and strategic work, with writers retaining responsibility for technical accuracy and final quality.</p>
     </div>
 
-    <figure class="case-visual" style="border-radius:18px;margin-bottom:22px">
-      <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
-           alt="Abstract AI network representing a staged AI-assisted authoring workflow" loading="lazy">
-    </figure>
-
+    <figure class="case-visual" style="border-radius:18px;margin-bottom:22px"><img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Abstract AI network representing a staged AI-assisted authoring workflow" loading="lazy"></figure>
     <div class="workflow">
       <article>
         <h3>1. Analyse product changes</h3>
@@ -1177,8 +770,16 @@ section {
       </article>
     </div>
 
-    <div class="note">
-      The workflow is designed to accelerate analysis and drafting—not replace writer judgment. Final technical validation and approval remain human responsibilities.
+    <div class="note"><strong>Approach:</strong> AI supports the workflow; it does not replace technical validation, editorial judgment, or writer accountability. Time savings have not been formally quantified.</div>
+    <div class="impact-panel" style="margin:22px 0 0">
+      <h4>How this improves the content operation</h4>
+      <div class="impact-grid">
+        <div class="impact-item"><strong>Faster drafting</strong><p>A trained AI-assisted workflow gives writers a stronger starting draft, reducing manual first-draft effort and helping the team respond to documentation requests faster.</p></div>
+        <div class="impact-item"><strong>Consistency and review efficiency</strong><p>Structured drafting and a dedicated review stage support more consistent structure, terminology, and documentation standards while reducing effort spent strengthening initial drafts.</p></div>
+        <div class="impact-item"><strong>More efficient Jira analysis</strong><p>AI agents help writers analyse Jira stories, linked issues, and product changes more efficiently, improving documentation planning and helping identify user-facing content needs.</p></div>
+        <div class="impact-item"><strong>Higher-value editorial work</strong><p>By shifting effort away from manual content generation, writers can spend more time validating technical details, improving quality, and designing content around customer needs—while retaining human ownership of accuracy.</p></div>
+      </div>
+      <p class="impact-caveat">These are qualitative operational outcomes; time savings and quality improvements have not yet been quantified. Future measurement could track drafting time, review effort, turnaround time, and revision rounds.</p>
     </div>
   </div>
 </section>
@@ -1186,126 +787,130 @@ section {
 <section class="soft" id="analytics">
   <div class="container">
     <div class="heading">
-      <p class="kicker">Case study 03 · Content optimization</p>
+      <p class="kicker">Case study 03 · Go Green initiative</p>
       <h2 class="title">Using Customer Insights to Drive Documentation Improvement</h2>
-      <p class="intro">I used customer behaviour and content usage insights to prioritize documentation improvements, focus attention on high-value information, and support a more consistent content maintenance process.</p>
+      <p class="intro">I led content modernization through the Go Green initiative by generating a Top Viewed Topics report, assessing how old the content was, and sharing the findings with Product Managers and Engineering. Working with stakeholders, we identified priority topics, analyzed content gaps, refreshed the material, improved its visual presentation, and added use cases to every top-viewed topic.</p>
     </div>
-
     <article class="card case">
-      <figure class="case-visual">
-        <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
-             alt="Analytics workspace representing content usage analysis" loading="lazy">
-      </figure>
+      <figure class="case-visual"><img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Analytics dashboard representing evidence-led content prioritization" loading="lazy"></figure>
       <div class="casehead">
-        <p class="kicker">Content quality · Customer insight · Governance</p>
-        <h3>Prioritizing the content that matters most</h3>
-        <p>My role: content modernization lead, using evidence and editorial judgment to guide improvement work.</p>
+        <p class="kicker">Customer insights · Content quality · Analytics</p>
+        <h3>Making content maintenance more intentional</h3>
+        <p>My role: lead the Go Green initiative, coordinate with Product Managers and Engineering, and guide evidence-based prioritization and content improvements.</p>
       </div>
       <div class="casebody">
-        <h4>The opportunity</h4>
-        <p>Large documentation collections can become difficult to maintain consistently. A structured approach helps identify content that deserves attention because of customer usage, changing product behaviour, or quality and currency concerns.</p>
-
+        <h4>The challenge</h4>
+        <p>Older documentation needed a more systematic refresh, while the move to a new authoring platform created an opportunity to modernize the overall customer experience. Because the Document360 migration was completed only last month, the new platform is still too recent for meaningful performance conclusions.</p>
         <h4>What I did</h4>
+        <ol>
+          <li><strong>Built a prioritization report.</strong> Generated a Top Viewed Topics report and assessed content age to identify frequently accessed material that could be outdated.</li>
+          <li><strong>Aligned cross-functional stakeholders.</strong> Shared the report with Product Managers and Engineering, then collaborated to agree on priority topics and understand content gaps.</li>
+          <li><strong>Refreshed and enriched content.</strong> Updated the identified topics, improved their visual presentation, and added use cases to all top-viewed topics to make guidance more practical.</li>
+          <li><strong>Connected content work to the platform transition.</strong> The initiative complemented the move from MindTouch to Document360, supporting a more organized and maintainable documentation experience.</li>
+        </ol>
+        <h4>Outcomes and next steps</h4>
         <ul>
-          <li>Reviewed content and usage insights to identify documentation that warranted attention.</li>
-          <li>Prioritized updates based on customer relevance, content currency, and product changes.</li>
-          <li>Worked with stakeholders to maintain alignment between product behaviour and published guidance.</li>
-          <li>Applied editorial review to improve consistency, clarity, and usability.</li>
+          <li><strong>Modernized the documentation experience:</strong> Completed the move to Document360 and established a new platform for ongoing content delivery and maintenance.</li>
+          <li><strong>Targeted maintenance:</strong> Used topic popularity and content age to guide refresh priorities.</li>
+          <li><strong>More actionable guidance:</strong> Added use cases across all top-viewed topics and enhanced their visual presentation.</li>
+          <li><strong>Stronger cross-functional alignment:</strong> Shared the report with Product Managers and Engineering and collaborated on topic selection and content-gap analysis.</li>
+          <li><strong>Measurement discipline:</strong> Continue to evaluate usage and customer feedback as sufficient post-migration data becomes available.</li>
         </ul>
-
-        <h4>Value created</h4>
-        <ul>
-          <li>Improved focus on high-value documentation and maintenance priorities.</li>
-          <li>Supported a more systematic approach to content currency and quality.</li>
-          <li>Created a repeatable basis for future content audits and optimization.</li>
-        </ul>
-        <div class="note">
-          <strong>Measurement opportunity:</strong> Track content currency, high-traffic page quality, failed searches, feedback, and documentation-related support trends to evaluate the ongoing effect of improvements.
+        <div class="impact-panel">
+          <h4>How this supports customer success and efficiency</h4>
+          <div class="impact-grid">
+            <div class="impact-item"><strong>Customer success</strong><p>Prioritizing high-traffic topics and assessing their age helps keep frequently used guidance current and relevant.</p></div>
+            <div class="impact-item"><strong>Self-service</strong><p>Adding use cases and improving visual presentation makes frequently accessed guidance more practical to navigate and apply.</p></div>
+            <div class="impact-item"><strong>Operational efficiency</strong><p>Using page-view evidence to prioritize updates gives the team a repeatable way to focus maintenance effort where it is most likely to matter.</p></div>
+            <div class="impact-item"><strong>Continuous improvement</strong><p>The new platform and early customer conversations provide a starting point for monitoring content usage and identifying future improvement areas.</p></div>
+          </div>
+          <p class="impact-caveat">Customer conversations were positive, but measurable changes in support volume, satisfaction, or search success have not yet been established.</p>
         </div>
+        <div class="note"><strong>Measurement status:</strong> The migration is recent and platform metrics have not yet been evaluated. No quantified improvement in search, adoption, satisfaction, or support volume is claimed at this stage.</div>
       </div>
     </article>
   </div>
 </section>
 
-<section id="knowledge-agent">
+<section class="soft" id="knowledge-agent">
   <div class="container">
     <div class="heading">
-      <p class="kicker">Case study 04 · Knowledge readiness</p>
+      <p class="kicker">Case study 04 · Conversational AI knowledge</p>
       <h2 class="title">Building AI-Ready Knowledge Experiences</h2>
-      <p class="intro">I partnered with Support and Product teams to make customer questions, troubleshooting guidance, and best practices more structured and useful for self-service and AI-supported discovery.</p>
+      <p class="intro">To prepare documentation for AI-powered self-service, we analyzed common Support cases to identify recurring customer questions and rewrote the related content so it could be retrieved more easily by AI. The work focused on making existing product knowledge clearer, more relevant, and better aligned with the problems customers actually raise.</p>
     </div>
 
-    <article class="card case">
-      <figure class="case-visual">
-        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
-             alt="Collaborative team representing customer knowledge and AI readiness" loading="lazy">
-      </figure>
-      <div class="casehead">
-        <p class="kicker">Knowledge management · Self-service · Conversational AI</p>
-        <h3>Structuring knowledge around customer questions</h3>
-        <p>My focus: content quality, reusable knowledge, and customer-oriented information design.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>Represent real customer questions</h3>
+        <p>Analyzed recurring Support cases to identify the customer questions and product issues that documentation needed to address.</p>
+      </article>
+      <article class="card">
+        <h3>Capture practical troubleshooting guidance</h3>
+        <p>Rewrote relevant documentation around those common cases, making the guidance clearer and more directly aligned with customer questions to support easier AI retrieval.</p>
+      </article>
+      <article class="card">
+        <h3>Prepare knowledge for customer self-service</h3>
+        <p>Prepared the knowledge source material for AI-powered self-service by improving how customer problems and their solutions were expressed in the content; the contribution was content analysis and rewriting, not engineering the AI system.</p>
+      </article>
+    </div>
+    <div class="impact-panel" style="margin:24px 0 0">
+      <h4>How this prepares knowledge for customer-facing AI</h4>
+      <div class="impact-grid">
+        <div class="impact-item"><strong>Customer self-service</strong><p>Content rewritten from recurring Support cases better reflects real customer questions and gives AI-powered retrieval clearer, more relevant material to surface.</p></div>
+        <div class="impact-item"><strong>Customer success</strong><p>Capturing best practices alongside direct answers supports customers in understanding not only what to do, but how to approach common tasks.</p></div>
+        <div class="impact-item"><strong>Knowledge quality</strong><p>Analysis of common Support cases grounded the content changes in actual customer issues rather than assumptions about what users ask.</p></div>
+        <div class="impact-item"><strong>AI readiness</strong><p>Rewritten content aligned to common Support cases provides more retrieval-friendly source material for an AI assistant. The work focused on knowledge preparation, not AI-system engineering.</p></div>
       </div>
-      <div class="casebody">
-        <h4>The challenge</h4>
-        <p>Customers need answers that are clear, consistent, and easy to discover. AI-supported search and conversational experiences also depend on reliable source content that is structured around real questions and tasks.</p>
-
-        <h4>What I did</h4>
-        <ul>
-          <li>Partnered with Support and Product stakeholders to understand recurring customer questions and troubleshooting needs.</li>
-          <li>Organized guidance around clear customer goals, product terminology, and practical next steps.</li>
-          <li>Emphasized consistent structure, terminology, and maintenance so content could be reused across knowledge experiences.</li>
-          <li>Considered discoverability and content readiness when reviewing the quality of knowledge assets.</li>
-        </ul>
-
-        <h4>Value created</h4>
-        <ul>
-          <li>Strengthened the structure and usability of customer-facing knowledge.</li>
-          <li>Supported more consistent answers across documentation and self-service experiences.</li>
-          <li>Improved the foundation for future AI-assisted knowledge discovery.</li>
-        </ul>
-        <div class="note">
-          AI readiness depends on source quality, structure, currency, and governance. The quality of the underlying knowledge remains central to a trustworthy customer experience.
-        </div>
-      </div>
-    </article>
+      <p class="impact-caveat">The demonstrated contribution is analyzing common Support cases and rewriting documentation for easier AI retrieval. Improvements in answer accuracy, containment, or support deflection have not been quantified.</p>
+    </div>
   </div>
 </section>
 
 <section class="soft" id="leadership-case">
   <div class="container">
     <div class="heading">
-      <p class="kicker">Case study 05 · Leadership</p>
+      <p class="kicker">Case study 05 · Documentation leadership</p>
       <h2 class="title">Leading Documentation Strategy, Operations, and Team Development</h2>
-      <p class="intro">I lead documentation strategy and execution while developing team capability, strengthening editorial practices, and aligning content operations with customer and business needs.</p>
+      <p class="intro">I lead documentation strategy, operations, team development, and quality practices while aligning knowledge investments with product priorities and customer success goals. I identified opportunities for AI-assisted work, established a structured adoption approach, trained the team, and integrated the workflow into everyday documentation practices.</p>
     </div>
-
     <article class="card case">
-      <figure class="case-visual">
-        <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
-             alt="Team collaboration representing cross-functional documentation leadership" loading="lazy">
-      </figure>
+      <figure class="case-visual"><img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Colleagues collaborating on priorities and delivery" loading="lazy"></figure>
       <div class="casehead">
-        <p class="kicker">Function ownership · People leadership · Collaboration</p>
-        <h3>Building a sustainable documentation practice</h3>
-        <p>My role: documentation and knowledge management leader, combining strategic ownership with hands-on editorial work.</p>
+        <p class="kicker">Function ownership · Team development · Cross-functional delivery</p>
+        <h3>Connecting strategy, people, and execution</h3>
+        <p>My role: own the Product Documentation function’s quality, maturity, and business impact while leading a team of four Product Documentation Specialists.</p>
       </div>
       <div class="casebody">
-        <h4>Leadership approach</h4>
+        <h4>The leadership challenge</h4>
+        <p>Documentation work spans product changes, release commitments, customer questions, and ongoing content maintenance. The team needs clear priorities and consistent quality while requirements and stakeholder needs evolve.</p>
+        <h4>How I lead</h4>
+        <ol>
+          <li><strong>Translate priorities into delivery.</strong> Connect business and product goals to documentation priorities, release notes, FAQs, and customer tasks.</li>
+          <li><strong>Develop the team and enable AI adoption.</strong> Identified opportunities to use AI in documentation, defined a structured approach to adoption, trained writers on effective usage, and established quality expectations. Coach writers to shift from feature-led descriptions to goal-based, customer-first content.</li>
+          <li><strong>Stay close to the craft.</strong> Review, edit, and write content when needed to resolve gaps, strengthen information architecture, and maintain editorial quality.</li>
+          <li><strong>Align cross-functional partners.</strong> Work with R&amp;D, Technical Support, Services, and product stakeholders to clarify product behaviour and keep content aligned with customer needs.</li>
+        </ol>
+        <h4>Leadership outcomes</h4>
         <ul>
-          <li>Lead and develop a team of four Product Documentation Specialists.</li>
-          <li>Translate product and business priorities into documentation plans and delivery expectations.</li>
-          <li>Partner with R&amp;D, Technical Support, Services, and product stakeholders.</li>
-          <li>Set expectations for content quality, terminology, review, and maintenance.</li>
-          <li>Stay close to writing and editing while enabling the team to work more independently.</li>
+          <li>Introduced AI-assisted workflows that reduced drafting effort and gave writers more time for validation and content quality.</li>
+          <li>Shifted documentation toward customer goals and outcomes rather than feature descriptions alone.</li>
+          <li>Strengthened collaboration across Product, Support, and Engineering to align product changes with documentation priorities.</li>
+          <li>Established consistent documentation and review practices to support quality, knowledge sharing, and team effectiveness.</li>
+          <li>Balanced strategic direction, operational delivery, team development, and hands-on editorial leadership.</li>
         </ul>
-
-        <h4>Value created</h4>
-        <ul>
-          <li>Clearer connection between documentation priorities and customer needs.</li>
-          <li>More consistent editorial practices and quality expectations.</li>
-          <li>Team development through coaching, review, and structured ways of working.</li>
-          <li>A practical foundation for incorporating AI-assisted workflows into documentation operations.</li>
-        </ul>
+        <p>This player-coach approach keeps strategy connected to execution while maintaining human ownership of technical accuracy, editorial judgment, and final content quality.</p>
+        <div class="impact-panel" style="margin:22px 0 0">
+          <h4>How this creates value beyond content delivery</h4>
+          <div class="impact-grid">
+            <div class="impact-item"><strong>Customer success</strong><p>Aligning documentation with customer tasks helps shift content from describing features to helping users achieve outcomes.</p></div>
+            <div class="impact-item"><strong>Operational efficiency</strong><p>Clear priorities and coaching help the team coordinate work across releases, FAQs, maintenance, and stakeholder requests.</p></div>
+            <div class="impact-item"><strong>Consistent quality</strong><p>Hands-on reviews, shared expectations, and stronger information architecture support a more coherent customer experience across content types.</p></div>
+            <div class="impact-item"><strong>Scalable capability</strong><p>Developing four specialists builds team capability and distributes documentation expertise instead of concentrating decisions with one person.</p></div>
+          </div>
+          <p class="impact-caveat">The outcomes above are described qualitatively; add measured time savings or a specific before-and-after example if documented metrics become available.</p>
+        </div>
+        <div class="note"><strong>Evidence note:</strong> This case describes leadership practices and scope. Add a specific before-and-after outcome only when you can support it with a real example or documented result.</div>
       </div>
     </article>
   </div>
@@ -1313,46 +918,46 @@ section {
 <section id="approach">
   <div class="container">
     <div class="heading">
-      <p class="kicker">My approach</p>
-      <h2 class="title">A Practical Framework for Better Knowledge Experiences</h2>
-      <p class="intro">Good documentation combines customer understanding, information architecture, editorial discipline, collaboration, and ongoing measurement. AI can support parts of this process when it is applied with clear controls.</p>
+      <p class="kicker">Leadership approach</p>
+      <h2 class="title">Leading Documentation as a Strategic Business Capability</h2>
+      <p class="intro">As a Documentation and Knowledge Management Leader, I own the Product Documentation function and drive initiatives that improve content quality, operational maturity, customer self-service, and organizational readiness for AI-enabled experiences. I combine strategic direction and team development with hands-on content work, bringing structure to ambiguity and influencing outcomes through collaboration.</p>
     </div>
 
     <div class="principles">
       <article class="principle">
-        <h3>Start with customer goals</h3>
-        <p>Understand what users need to accomplish, where they struggle, and what information helps them move forward.</p>
+        <h3>Set the knowledge strategy and own outcomes</h3>
+        <p>Translate business and product priorities into content priorities, maintain delivery focus, and continuously improve documentation practices and maturity.</p>
       </article>
       <article class="principle">
-        <h3>Structure for discovery</h3>
-        <p>Use clear information architecture, consistent terminology, and task-oriented content to make knowledge easier to find and use.</p>
+        <h3>Lead as a player-coach</h3>
+        <p>Develop a team of four Product Documentation Specialists while remaining directly involved in writing, reviewing, editing, and resolving content gaps.</p>
       </article>
       <article class="principle">
-        <h3>Build quality into the process</h3>
-        <p>Apply editorial standards, technical validation, and clear ownership throughout the content lifecycle.</p>
+        <h3>Connect teams around customer needs</h3>
+        <p>Work with leaders across R&amp;D, Technical Support, and Services to align documentation, release notes, and FAQs with product behaviour and customer needs.</p>
       </article>
       <article class="principle">
-        <h3>Work across functions</h3>
-        <p>Partner with product, engineering, support, and services teams to keep documentation aligned with product behaviour and customer needs.</p>
+        <h3>Strengthen content architecture and governance</h3>
+        <p>Bring structure, clarity, consistent terminology, and user-focused information architecture to complex product information.</p>
       </article>
       <article class="principle">
-        <h3>Use AI with accountability</h3>
-        <p>Apply AI to analysis, drafting, and review while retaining human responsibility for accuracy, context, and final decisions.</p>
+        <h3>Develop people and build capability</h3>
+        <p>Coach writers, recognize individual strengths, set clear expectations, and help the team move from feature-focused content toward goal-based, customer-first writing.</p>
       </article>
       <article class="principle">
-        <h3>Improve through evidence</h3>
-        <p>Use feedback, search patterns, analytics, and content audits to guide ongoing improvements and future priorities.</p>
+        <h3>Influence without authority</h3>
+        <p>Navigate ambiguity, bring stakeholders together, and use customer needs, product context, and editorial judgment to move work forward with execution discipline.</p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="soft" id="tools">
+<section id="tools">
   <div class="container">
     <div class="heading">
-      <p class="kicker">Tools and capabilities</p>
-      <h2 class="title">Platforms, Workflows, and Content Operations</h2>
-      <p class="intro">A combination of documentation platforms, collaboration tools, AI-assisted workflows, and analytics supports content delivery and continuous improvement.</p>
+      <p class="kicker">Tools and platforms</p>
+      <h2 class="title">Capabilities, Platforms, and Documentation Operations</h2>
+      <p class="intro">I leverage documentation platforms, content operations practices, AI-assisted workflows, analytics, and collaboration tools to improve knowledge quality, discoverability, governance, and customer self-service.</p>
     </div>
 
     <div class="tools-grid">
@@ -1435,8 +1040,7 @@ section {
     <div class="aboutgrid">
       <div class="aboutcopy">
         <figure class="about-visual">
-          <img src="https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
-               alt="A digital product experience with structured information and interface elements" loading="lazy">
+          <img src="https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="A digital product experience with structured information and interface elements" loading="lazy">
         </figure>
 
         <p>Documentation, knowledge management, and content strategy leader with more than 20 years of experience helping enterprise software organizations improve customer onboarding, product adoption, self-service, and knowledge experiences.</p>
@@ -1502,24 +1106,6 @@ section {
   </div>
 </section>
 
-<section class="profile-video-section" id="profile-video">
-  <div class="container video-layout">
-    <div class="video-copy">
-      <p class="kicker">A short introduction</p>
-      <h2 class="title">Meet Geetha</h2>
-      <p class="intro">A brief introduction to my approach to documentation strategy, knowledge management, and AI-enabled content operations.</p>
-    </div>
-
-    <div class="video-placeholder" aria-label="Profile video placeholder">
-      <div class="video-placeholder-content">
-        <span class="play-icon" aria-hidden="true">▶</span>
-        <strong>Profile introduction video</strong>
-        <span>Add your introduction video here when ready.</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="contact" id="contact">
   <div class="container">
     <div class="heading">
@@ -1545,5 +1131,6 @@ section {
   </div>
 </footer>
 
+<!-- To personalize: add profile-photo.jpg and profile-introduction.mp4 beside this HTML file, then uncomment the matching image/video elements above. -->
 </body>
 </html>
