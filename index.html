@@ -22,16 +22,41 @@ a{color:inherit}
 .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
 .brand{display:flex;align-items:center;gap:12px;color:var(--navy);text-decoration:none;flex:0 0 auto}
 .brand svg{width:38px;height:38px;color:var(--blue)}
-.brand:after{content:"Geetha B.G.\A Knowledge Management Leader";white-space:pre;font-size:.82rem;line-height:1.25;font-weight:750;max-width:190px}
+.brand:after{content:"Geetha B.G.\A Knowledge Management Leader";
+  white-space:pre;
+  font-size:.82rem;
+  line-height:1.25;
+  font-weight:400;
+  max-width:190px
+}
 .navlinks{display:flex;align-items:center;justify-content:flex-end;gap:clamp(12px,1.7vw,23px);flex-wrap:wrap}
 .navlinks a{font-size:.82rem;font-weight:700;color:#435d7b;text-decoration:none;white-space:nowrap;transition:color .2s}
 .navlinks a:hover,.link:hover{color:var(--blue)}
-.hero{padding:72px 0 68px;background:linear-gradient(115deg,#155b8f 0%,#124d7b 52%,#103f68 100%);overflow:hidden}
-.hero .eyebrow{color:#c5def4}
-.hero h1{color:#fff}
-.hero h2{color:#fff}
-.hero-copy{color:#e2edf7}
-.hero .secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+/* Hero section */
+.hero{
+  padding:72px 0 68px;
+  background:linear-gradient(115deg,#155b8f 0%,#124d7b 52%,#103f68 100%);
+  overflow:hidden;
+}
+
+.hero .eyebrow{
+  color:#d5e8fa !important;
+}
+
+.hero h1,
+.hero h2{
+  color:#ffffff !important;
+}
+
+.hero .hero-copy{
+  color:#edf5fc !important;
+}
+
+.hero .secondary{
+  background:transparent;
+  color:#ffffff;
+  border-color:rgba(255,255,255,.65);
+}
 
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr);gap:58px;align-items:center}
 .eyebrow,.kicker{font-size:.73rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800}
